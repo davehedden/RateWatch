@@ -13,7 +13,7 @@ struct Rate_WatchApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StopwatchView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

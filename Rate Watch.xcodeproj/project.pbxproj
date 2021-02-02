@@ -8,13 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */; };
-		552643FE25AE6B8F00111284 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552643FD25AE6B8F00111284 /* ContentView.swift */; };
 		5526440025AE6B9000111284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552643FF25AE6B9000111284 /* Assets.xcassets */; };
 		5526440325AE6B9000111284 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5526440225AE6B9000111284 /* Preview Assets.xcassets */; };
-		5526440525AE6B9000111284 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526440425AE6B9000111284 /* Persistence.swift */; };
-		5526440825AE6B9000111284 /* Rate_Watch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5526440625AE6B9000111284 /* Rate_Watch.xcdatamodeld */; };
+		5526440525AE6B9000111284 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526440425AE6B9000111284 /* PersistenceController.swift */; };
 		5526441325AE6B9000111284 /* Rate_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526441225AE6B9000111284 /* Rate_WatchTests.swift */; };
 		5526441E25AE6B9000111284 /* Rate_WatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526441D25AE6B9000111284 /* Rate_WatchUITests.swift */; };
+		5526443025AE6C3B00111284 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5526442E25AE6C3B00111284 /* Data.xcdatamodeld */; };
+		552B164E25C8633900AEB806 /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B164A25C8633900AEB806 /* Race+CoreDataClass.swift */; };
+		552B164F25C8633900AEB806 /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B164B25C8633900AEB806 /* Race+CoreDataProperties.swift */; };
+		552B165725C8731400AEB806 /* TempLap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B165625C8731400AEB806 /* TempLap.swift */; };
+		552B166A25C8808000AEB806 /* Lap+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B166825C8808000AEB806 /* Lap+CoreDataClass.swift */; };
+		552B166B25C8808000AEB806 /* Lap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B166925C8808000AEB806 /* Lap+CoreDataProperties.swift */; };
+		552B167925C8C67D00AEB806 /* TempLapDisplayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B167825C8C67D00AEB806 /* TempLapDisplayRow.swift */; };
+		55628FAD25BA6C77009DC6BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FAC25BA6C77009DC6BE /* Constants.swift */; };
+		55628FB525BA6D03009DC6BE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FB425BA6D03009DC6BE /* Settings.swift */; };
+		55628FBA25BA6D5C009DC6BE /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FB925BA6D5C009DC6BE /* TimeIntervalExtension.swift */; };
+		55628FC225BA6D9D009DC6BE /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FC125BA6D9D009DC6BE /* TestData.swift */; };
+		55628FC825BA6F38009DC6BE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FC725BA6F38009DC6BE /* ColorExtension.swift */; };
+		55628FD325BA6FF4009DC6BE /* alarm clock.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55628FD225BA6FF4009DC6BE /* alarm clock.ttf */; };
+		55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FD725BA7016009DC6BE /* TimeFormatter.swift */; };
+		55628FDD25BA7025009DC6BE /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FDC25BA7025009DC6BE /* Haptics.swift */; };
+		55628FEA25BA70FB009DC6BE /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FE925BA70FB009DC6BE /* StopwatchView.swift */; };
+		55628FEF25BA7131009DC6BE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FEE25BA7131009DC6BE /* SettingsView.swift */; };
+		55628FF425BA716F009DC6BE /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FF325BA716F009DC6BE /* RaceListView.swift */; };
+		55628FFC25BA7197009DC6BE /* RaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55628FFB25BA7197009DC6BE /* RaceDetailView.swift */; };
+		5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562900325BA71D0009DC6BE /* TimerDisplay.swift */; };
+		5562900C25BA71F1009DC6BE /* ButtonDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562900B25BA71F1009DC6BE /* ButtonDisplay.swift */; };
+		5562901125BA7215009DC6BE /* ButtonTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562901025BA7215009DC6BE /* ButtonTemplates.swift */; };
+		5562901625BA7239009DC6BE /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562901525BA7239009DC6BE /* Buttons.swift */; };
+		5562901B25BA725B009DC6BE /* LapDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562901A25BA725B009DC6BE /* LapDisplay.swift */; };
+		5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562901F25BA727E009DC6BE /* LapDisplayRowHeader.swift */; };
+		5562902525BA729F009DC6BE /* LapDisplayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562902425BA729F009DC6BE /* LapDisplayList.swift */; };
+		5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562902925BA72C5009DC6BE /* LapDisplayRow.swift */; };
+		5562902F25BA72F1009DC6BE /* LapDisplayCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562902E25BA72F1009DC6BE /* LapDisplayCount.swift */; };
+		5562903425BA7312009DC6BE /* LapDisplayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903325BA7312009DC6BE /* LapDisplayTime.swift */; };
+		5562903925BA7332009DC6BE /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903825BA7332009DC6BE /* MenuBar.swift */; };
+		5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903D25BA7382009DC6BE /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +66,9 @@
 /* Begin PBXFileReference section */
 		552643F825AE6B8F00111284 /* Rate Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rate Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_WatchApp.swift; sourceTree = "<group>"; };
-		552643FD25AE6B8F00111284 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		552643FF25AE6B9000111284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5526440225AE6B9000111284 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5526440425AE6B9000111284 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		5526440725AE6B9000111284 /* Rate_Watch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rate_Watch.xcdatamodel; sourceTree = "<group>"; };
+		5526440425AE6B9000111284 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		5526440925AE6B9000111284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5526440E25AE6B9000111284 /* Rate WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rate WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5526441225AE6B9000111284 /* Rate_WatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_WatchTests.swift; sourceTree = "<group>"; };
@@ -49,6 +76,37 @@
 		5526441925AE6B9000111284 /* Rate WatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rate WatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5526441D25AE6B9000111284 /* Rate_WatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_WatchUITests.swift; sourceTree = "<group>"; };
 		5526441F25AE6B9000111284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5526442F25AE6C3B00111284 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		552B164A25C8633900AEB806 /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		552B164B25C8633900AEB806 /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		552B165625C8731400AEB806 /* TempLap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLap.swift; sourceTree = "<group>"; };
+		552B166825C8808000AEB806 /* Lap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		552B166925C8808000AEB806 /* Lap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		552B167825C8C67D00AEB806 /* TempLapDisplayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLapDisplayRow.swift; sourceTree = "<group>"; };
+		55628FAC25BA6C77009DC6BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55628FB425BA6D03009DC6BE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		55628FB925BA6D5C009DC6BE /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		55628FC125BA6D9D009DC6BE /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		55628FC725BA6F38009DC6BE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		55628FD225BA6FF4009DC6BE /* alarm clock.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alarm clock.ttf"; sourceTree = "<group>"; };
+		55628FD725BA7016009DC6BE /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		55628FDC25BA7025009DC6BE /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		55628FE925BA70FB009DC6BE /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		55628FEE25BA7131009DC6BE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		55628FF325BA716F009DC6BE /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
+		55628FFB25BA7197009DC6BE /* RaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailView.swift; sourceTree = "<group>"; };
+		5562900325BA71D0009DC6BE /* TimerDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplay.swift; sourceTree = "<group>"; };
+		5562900B25BA71F1009DC6BE /* ButtonDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDisplay.swift; sourceTree = "<group>"; };
+		5562901025BA7215009DC6BE /* ButtonTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTemplates.swift; sourceTree = "<group>"; };
+		5562901525BA7239009DC6BE /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		5562901A25BA725B009DC6BE /* LapDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplay.swift; sourceTree = "<group>"; };
+		5562901F25BA727E009DC6BE /* LapDisplayRowHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayRowHeader.swift; sourceTree = "<group>"; };
+		5562902425BA729F009DC6BE /* LapDisplayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayList.swift; sourceTree = "<group>"; };
+		5562902925BA72C5009DC6BE /* LapDisplayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayRow.swift; sourceTree = "<group>"; };
+		5562902E25BA72F1009DC6BE /* LapDisplayCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayCount.swift; sourceTree = "<group>"; };
+		5562903325BA7312009DC6BE /* LapDisplayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayTime.swift; sourceTree = "<group>"; };
+		5562903825BA7332009DC6BE /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		5562903D25BA7382009DC6BE /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +158,13 @@
 			isa = PBXGroup;
 			children = (
 				552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */,
-				552643FD25AE6B8F00111284 /* ContentView.swift */,
-				552643FF25AE6B9000111284 /* Assets.xcassets */,
-				5526440425AE6B9000111284 /* Persistence.swift */,
 				5526440925AE6B9000111284 /* Info.plist */,
-				5526440625AE6B9000111284 /* Rate_Watch.xcdatamodeld */,
+				552643FF25AE6B9000111284 /* Assets.xcassets */,
+				55628F8025B533AF009DC6BE /* Models */,
+				55628FAB25BA6C43009DC6BE /* ViewModels */,
+				55628F7025B53331009DC6BE /* Views */,
+				55628F7C25B5339A009DC6BE /* CoreData */,
+				55628FC625BA6EF1009DC6BE /* Utilities */,
 				5526440125AE6B9000111284 /* Preview Content */,
 			);
 			path = "Rate Watch";
@@ -134,6 +194,89 @@
 				5526441F25AE6B9000111284 /* Info.plist */,
 			);
 			path = "Rate WatchUITests";
+			sourceTree = "<group>";
+		};
+		55628F7025B53331009DC6BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55628F7425B53346009DC6BE /* Screens */,
+				55628F7825B5334D009DC6BE /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55628F7425B53346009DC6BE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				55628FE925BA70FB009DC6BE /* StopwatchView.swift */,
+				55628FEE25BA7131009DC6BE /* SettingsView.swift */,
+				55628FF325BA716F009DC6BE /* RaceListView.swift */,
+				55628FFB25BA7197009DC6BE /* RaceDetailView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		55628F7825B5334D009DC6BE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5562900325BA71D0009DC6BE /* TimerDisplay.swift */,
+				5562900B25BA71F1009DC6BE /* ButtonDisplay.swift */,
+				5562901025BA7215009DC6BE /* ButtonTemplates.swift */,
+				5562901525BA7239009DC6BE /* Buttons.swift */,
+				5562901A25BA725B009DC6BE /* LapDisplay.swift */,
+				5562901F25BA727E009DC6BE /* LapDisplayRowHeader.swift */,
+				5562902425BA729F009DC6BE /* LapDisplayList.swift */,
+				5562902925BA72C5009DC6BE /* LapDisplayRow.swift */,
+				552B167825C8C67D00AEB806 /* TempLapDisplayRow.swift */,
+				5562902E25BA72F1009DC6BE /* LapDisplayCount.swift */,
+				5562903325BA7312009DC6BE /* LapDisplayTime.swift */,
+				5562903825BA7332009DC6BE /* MenuBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		55628F7C25B5339A009DC6BE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5526440425AE6B9000111284 /* PersistenceController.swift */,
+				5526442E25AE6C3B00111284 /* Data.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		55628F8025B533AF009DC6BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				552B166825C8808000AEB806 /* Lap+CoreDataClass.swift */,
+				552B166925C8808000AEB806 /* Lap+CoreDataProperties.swift */,
+				552B164A25C8633900AEB806 /* Race+CoreDataClass.swift */,
+				552B164B25C8633900AEB806 /* Race+CoreDataProperties.swift */,
+				55628FB425BA6D03009DC6BE /* Settings.swift */,
+				552B165625C8731400AEB806 /* TempLap.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55628FAB25BA6C43009DC6BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5562903D25BA7382009DC6BE /* Stopwatch.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		55628FC625BA6EF1009DC6BE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				55628FD225BA6FF4009DC6BE /* alarm clock.ttf */,
+				55628FC725BA6F38009DC6BE /* ColorExtension.swift */,
+				55628FAC25BA6C77009DC6BE /* Constants.swift */,
+				55628FDC25BA7025009DC6BE /* Haptics.swift */,
+				55628FC125BA6D9D009DC6BE /* TestData.swift */,
+				55628FD725BA7016009DC6BE /* TimeFormatter.swift */,
+				55628FB925BA6D5C009DC6BE /* TimeIntervalExtension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5526440325AE6B9000111284 /* Preview Assets.xcassets in Resources */,
+				55628FD325BA6FF4009DC6BE /* alarm clock.ttf in Resources */,
 				5526440025AE6B9000111284 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +409,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5526440525AE6B9000111284 /* Persistence.swift in Sources */,
-				5526440825AE6B9000111284 /* Rate_Watch.xcdatamodeld in Sources */,
-				552643FE25AE6B8F00111284 /* ContentView.swift in Sources */,
+				5562901625BA7239009DC6BE /* Buttons.swift in Sources */,
+				55628FEF25BA7131009DC6BE /* SettingsView.swift in Sources */,
+				55628FFC25BA7197009DC6BE /* RaceDetailView.swift in Sources */,
+				55628FDD25BA7025009DC6BE /* Haptics.swift in Sources */,
+				5562903425BA7312009DC6BE /* LapDisplayTime.swift in Sources */,
+				5562901B25BA725B009DC6BE /* LapDisplay.swift in Sources */,
+				5562901125BA7215009DC6BE /* ButtonTemplates.swift in Sources */,
+				5562902F25BA72F1009DC6BE /* LapDisplayCount.swift in Sources */,
+				55628FC225BA6D9D009DC6BE /* TestData.swift in Sources */,
+				5526440525AE6B9000111284 /* PersistenceController.swift in Sources */,
+				5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */,
+				5562900C25BA71F1009DC6BE /* ButtonDisplay.swift in Sources */,
+				552B166A25C8808000AEB806 /* Lap+CoreDataClass.swift in Sources */,
+				55628FB525BA6D03009DC6BE /* Settings.swift in Sources */,
+				552B164F25C8633900AEB806 /* Race+CoreDataProperties.swift in Sources */,
+				552B166B25C8808000AEB806 /* Lap+CoreDataProperties.swift in Sources */,
+				5526443025AE6C3B00111284 /* Data.xcdatamodeld in Sources */,
+				55628FBA25BA6D5C009DC6BE /* TimeIntervalExtension.swift in Sources */,
+				5562902525BA729F009DC6BE /* LapDisplayList.swift in Sources */,
+				552B167925C8C67D00AEB806 /* TempLapDisplayRow.swift in Sources */,
+				55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */,
+				5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */,
+				55628FAD25BA6C77009DC6BE /* Constants.swift in Sources */,
+				5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */,
+				552B164E25C8633900AEB806 /* Race+CoreDataClass.swift in Sources */,
 				552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */,
+				5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */,
+				552B165725C8731400AEB806 /* TempLap.swift in Sources */,
+				55628FEA25BA70FB009DC6BE /* StopwatchView.swift in Sources */,
+				55628FC825BA6F38009DC6BE /* ColorExtension.swift in Sources */,
+				5562903925BA7332009DC6BE /* MenuBar.swift in Sources */,
+				55628FF425BA716F009DC6BE /* RaceListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,13 +762,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5526440625AE6B9000111284 /* Rate_Watch.xcdatamodeld */ = {
+		5526442E25AE6C3B00111284 /* Data.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5526440725AE6B9000111284 /* Rate_Watch.xcdatamodel */,
+				5526442F25AE6C3B00111284 /* Data.xcdatamodel */,
 			);
-			currentVersion = 5526440725AE6B9000111284 /* Rate_Watch.xcdatamodel */;
-			path = Rate_Watch.xcdatamodeld;
+			currentVersion = 5526442F25AE6C3B00111284 /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
