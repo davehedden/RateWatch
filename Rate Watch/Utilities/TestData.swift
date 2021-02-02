@@ -60,7 +60,7 @@ var sampleLapArray4 = [
     sampleRace4Lap4
 ]
 
-var samplePredicate = NSPredicate(format: "raceID == 1.0")
+var samplePredicate = NSPredicate(format: "raceID == 2.0")
 
 //var sampleRace1 = Race(id: 1.0, laps: sampleLapArray1)
 //var sampleRace2 = Race(id: 2.0, laps: sampleLapArray2)
