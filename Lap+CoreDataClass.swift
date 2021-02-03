@@ -2,7 +2,7 @@
 //  Lap+CoreDataClass.swift
 //  Rate Watch
 //
-//  Created by Dave Hedden on 2/1/21.
+//  Created by Dave Hedden on 2/2/21.
 //
 //
 

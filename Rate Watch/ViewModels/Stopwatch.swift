@@ -8,6 +8,7 @@
 import Foundation
 import QuartzCore
 import CoreData
+import SwiftUI
 
 enum TimerStatus {
     case initial
@@ -43,7 +44,7 @@ class Stopwatch: ObservableObject {
     var timeOnTapRate: TimeInterval = 0
     var strokeRates: [TimeInterval] = []
     var rateUnits: String = defaults.object(forKey: K.UserDefaultKeys.rateUnits) as? String ?? K.RateUnits.secondsPerCycle
-    var rateBase: Double = defaults.double(forKey: K.UserDefaultKeys.rateBase)
+    var rateBase: Double = defaults.object(forKey: K.UserDefaultKeys.rateBase) as? Double ?? 3.0
     
     // MARK: Save Functionality Properties
     @Published var tempLapArray: [TempLap] = []
@@ -196,8 +197,9 @@ extension Stopwatch {
         /// This function is called whenever the RATE button is tapped
         
         // Call the rate timer to get the stroke rate, based on current rateUnits & rateBase settings
+        print(rateUnits)
+        print(rateBase)
         getRate(units: rateUnits, cycles: rateBase)
-        
     }
     
     func onTapReset() {
@@ -238,9 +240,7 @@ extension Stopwatch {
         
         raceIsSaved = true
         
-        saveAllLaps(tempLapArray)
-        
-        saveRace()
+        saveRaceAndLaps()
         
     }
     
@@ -283,61 +283,6 @@ extension Stopwatch {
         // Clear the stroke rate array so that stroke rates from the previous lap do not get added to the current lap data
         strokeRates.removeAll()
     }
-    
-    func saveTempLap() {
-        // Set a unique lap ID as the current time interval since 1970
-        let lapID = Date().timeIntervalSince1970
-    
-        // Temporarily store the current lap in the teampLap dictionary so that it can be displayed
-        lapDataOnLastTap = TempLap(id: lapID, raceID: raceID!, lapNum: lapCount, cumTime: cumTimeOnLastTap, lapTime: lapTimeOnLastTap, lapTimeAlternate: lapTimeAlternate, strokeCount: strokeCount, strokeRates: strokeRates, rateUnits: rateUnits)
-        tempLapArray.append(lapDataOnLastTap!)
-    }
-    
-    func saveLap(_ lap: TempLap) {
-        let newLap = Lap(context: viewContext)
-        newLap.id = lap.id!
-        newLap.raceID = lap.raceID!
-        newLap.lapNum = lap.lapNum
-        newLap.cumTime = lap.cumTime
-        newLap.lapTime = lap.lapTime
-        newLap.lapTimeAlternate = lap.lapTimeAlternate
-        newLap.strokeCount = lap.strokeCount
-        newLap.strokeRates = strokeRates
-        newLap.rateUnits = rateUnits
-
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-    }
-    
-    func saveAllLaps(_ lapArray: [TempLap]) {
-        for lap in lapArray {
-            saveLap(lap)
-        }
-    }
-    
-    func saveRace() {
-        let newRace = Race(context: viewContext)
-        if let newID = raceID, let newTimestamp = raceTimestamp {
-            newRace.id = newID
-            newRace.timestamp = newTimestamp
-        }
-        
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-    }
-    
 }
 
 
@@ -371,5 +316,56 @@ extension Stopwatch {
             return (time / cycles).round(toPlaces: 2)
         }
     }
+}
 
+
+// MARK: - Persistence Functions
+extension Stopwatch {
+    
+    func saveTempLap() {
+        // Set a unique lap ID as the current time interval since 1970
+        let lapID = Date().timeIntervalSince1970
+    
+        // Temporarily store the current lap in the teampLap dictionary so that it can be displayed
+        lapDataOnLastTap = TempLap(id: lapID, raceID: raceID!, lapNum: lapCount, cumTime: cumTimeOnLastTap, lapTime: lapTimeOnLastTap, lapTimeAlternate: lapTimeAlternate, strokeCount: strokeCount, strokeRates: strokeRates, rateUnits: rateUnits)
+        tempLapArray.append(lapDataOnLastTap!)
+    }
+    
+    func createLaps(lapArray: [TempLap], race: Race) {
+        for lap in lapArray {
+            let newLap = Lap(context: viewContext)
+            newLap.id = lap.id!
+            newLap.raceID = lap.raceID!
+            newLap.lapNum = lap.lapNum
+            newLap.cumTime = lap.cumTime
+            newLap.lapTime = lap.lapTime
+            newLap.lapTimeAlternate = lap.lapTimeAlternate
+            newLap.strokeCount = lap.strokeCount
+            newLap.strokeRates = strokeRates
+            newLap.rateUnits = rateUnits
+            newLap.race = race
+        }
+    }
+    
+    func saveRaceAndLaps() {
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        let newRace = Race(context: viewContext)
+        if let newID = raceID, let newTimestamp = raceTimestamp {
+            newRace.id = newID
+            newRace.timestamp = newTimestamp
+        }
+        
+        createLaps(lapArray: tempLapArray, race: newRace)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+        
+    }
+    
 }
