@@ -43,10 +43,10 @@ struct TimerDisplay: View {
             
             // Count Tracker & Rate Timer
             HStack {
+                TimerLabel(label: "Count")
+                
                 Text(String(format: "%02d", stopwatch.strokeCount))
                     .font(Font.custom("alarm clock", size: 36))
-                
-                TimerLabel(label: "Count")
                 
                 Spacer()
                 

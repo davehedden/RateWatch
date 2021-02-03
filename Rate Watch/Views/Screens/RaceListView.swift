@@ -24,9 +24,17 @@ struct RaceListView: View {
                 ForEach(races) { race in
                     let predicate = NSPredicate(format: "raceID == \(race.id)")
                     
+                    let lastLap = race.laps?.lastObject as? Lap
+                    let cumTime = lastLap?.cumTime
+                    
                     NavigationLink(destination: RaceDetailView(predicate: predicate)) {
-                        if let date = race.timestamp {
-                            Text(date, formatter: dateFormatter)
+                        HStack {
+                            if let date = race.timestamp {
+                                Text(date, formatter: dateFormatter)
+                            }
+                            if let time = cumTime {
+                                Text(String(time.formattedLapDisplay()))
+                            }
                         }
                     }
                 }

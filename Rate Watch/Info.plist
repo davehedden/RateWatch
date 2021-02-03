@@ -35,6 +35,8 @@
 	<true/>
 	<key>UILaunchScreen</key>
 	<dict>
+		<key>UIImageName</key>
+		<string>RateWatchIcon</string>
 		<key>UIColorName</key>
 		<string>FlatUIGreenCAN</string>
 	</dict>
