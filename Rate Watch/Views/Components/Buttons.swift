@@ -14,7 +14,7 @@ struct CountAndRateButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapCountAndRate()
-            hapticSuccess()
+            hapticSuccess(isOn: settings.rateButtonHaptics)
         }) {
             LongRateButton(buttonIconName: "gauge.badge.plus", label: "COUNT & RATE", rateIconName: "\(Int(settings.rateBase)).circle.fill")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -22,12 +22,13 @@ struct CountAndRateButton: View {
 }
 
 struct CountButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapCount()
-            hapticSuccess()
+            hapticSuccess(isOn: settings.rateButtonHaptics)
         }) {
             SmallButton(buttonIconName: "plus.circle.fill", label: "COUNT")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -41,7 +42,7 @@ struct RateButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapRate()
-            hapticSuccess()
+            hapticSuccess(isOn: settings.rateButtonHaptics)
         }) {
             SmallRateButton(buttonIconName: "metronome.fill", label: "RATE", rateIconName: "\(Int(settings.rateBase)).circle.fill")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -49,12 +50,13 @@ struct RateButton: View {
 }
 
 struct StopButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapStop()
-            hapticWarning()
+            hapticWarning(isOn: settings.startButtonHaptics)
         }) {
             BigButton(buttonIconName: "stop.fill", label: "STOP")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatRedCAN, buttonColorPressed: Color.flatRedCANHL))
@@ -62,12 +64,13 @@ struct StopButton: View {
 }
 
 struct StartButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapStart()
-            hapticWarning()
+            hapticWarning(isOn: settings.startButtonHaptics)
         }) {
             BigButton(buttonIconName: "play.fill", label: "START")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatGreenCAN, buttonColorPressed: Color.flatGreenCANHL))
@@ -75,12 +78,13 @@ struct StartButton: View {
 }
 
 struct LapButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapLap()
-            hapticSuccess()
+            hapticSuccess(isOn: settings.lapButtonHaptics)
         }) {
             BigButton(buttonIconName: "repeat", label: "LAP")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatYellowCAN, buttonColorPressed: Color.flatYellowCANHL))
@@ -88,12 +92,13 @@ struct LapButton: View {
 }
 
 struct Add5Button: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapAdd5()
-            //                                hapticSuccess()
+            hapticSuccess(isOn: settings.add5ButtonHaptics)
         }) {
             SmallButton(buttonIconName: "forward.fill", label: "ADD :05")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatYellowCAN, buttonColorPressed: Color.flatYellowCANHL))
@@ -101,12 +106,13 @@ struct Add5Button: View {
 }
 
 struct SaveButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapSave()
-            //                                hapticSuccess()
+            hapticSuccess(isOn: settings.saveButtonHaptics)
         }) {
             SmallButton(buttonIconName: "folder.fill.badge.plus", label: "SAVE")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatPurpleUK, buttonColorPressed: Color.flatPurpleUKHL))
@@ -115,21 +121,20 @@ struct SaveButton: View {
 
 struct SaveButtonInactive: View {
     var body: some View {
-        Button(action: {
-//            hapticSuccess()
-        }) {
+        Button(action: {}) {
             SmallButtonInactive(buttonIconName: "folder.fill", label: "SAVED")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatSilverCAN, buttonColorPressed: Color.flatSilverCAN))
     }
 }
 
 struct ResetButton: View {
+    @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     
     var body: some View {
         Button(action: {
             stopwatch.onTapReset()
-//            hapticError()
+            hapticError(isOn: settings.resetButtonHaptics)
         }) {
             SmallButton(buttonIconName: "arrow.counterclockwise", label: "RESET")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatRedCAN, buttonColorPressed: Color.flatRedCANHL))
@@ -146,19 +151,19 @@ struct Buttons_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
         
-        StartButton(stopwatch: testStopwatch)
+        StartButton(settings: testSettings, stopwatch: testStopwatch)
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
         
-        StopButton(stopwatch: testStopwatch)
+        StopButton(settings: testSettings, stopwatch: testStopwatch)
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
         
-        LapButton(stopwatch: testStopwatch)
+        LapButton(settings: testSettings, stopwatch: testStopwatch)
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
         
-        SaveButton(stopwatch: testStopwatch)
+        SaveButton(settings: testSettings, stopwatch: testStopwatch)
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
     }

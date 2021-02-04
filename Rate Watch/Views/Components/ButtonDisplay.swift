@@ -23,7 +23,7 @@ struct ButtonDisplay: View {
                     
                 } else {
                     // Otherwise, show the Count and Rate buttons separately
-                    CountButton(stopwatch: stopwatch)
+                    CountButton(settings: settings, stopwatch: stopwatch)
                     
                     RateButton(settings: settings, stopwatch: stopwatch)
                 }
@@ -34,29 +34,29 @@ struct ButtonDisplay: View {
             HStack(spacing: 20) {
                 // Start or Stop button
                 if stopwatch.timerStatus == .running {
-                    StopButton(stopwatch: stopwatch)
+                    StopButton(settings: settings, stopwatch: stopwatch)
                 } else {
-                    StartButton(stopwatch: stopwatch)
+                    StartButton(settings: settings, stopwatch: stopwatch)
                 }
                 
                 // Lap or Add5/Save & Reset buttons
                 if stopwatch.timerStatus == .running {
-                    LapButton(stopwatch: stopwatch)
+                    LapButton(settings: settings, stopwatch: stopwatch)
                 } else {
                     VStack(spacing: 20) {
                         
                         if stopwatch.timerStatus == .initial {
                             // Add 5 button
-                            Add5Button(stopwatch: stopwatch)
+                            Add5Button(settings: settings, stopwatch: stopwatch)
                         } else {
                             if stopwatch.raceIsSaved == false {
-                                SaveButton(stopwatch: stopwatch)
+                                SaveButton(settings: settings, stopwatch: stopwatch)
                             } else {
                                 SaveButtonInactive()
                             }
                         }
                         
-                        ResetButton(stopwatch: stopwatch)
+                        ResetButton(settings: settings, stopwatch: stopwatch)
                         
                     }.frame(height: 130)
                 }

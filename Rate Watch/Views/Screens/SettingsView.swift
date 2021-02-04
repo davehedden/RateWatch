@@ -18,12 +18,12 @@ struct SettingsView: View {
             Form {
                 Section(header: HStack {
                     Text("Rate Options")
-                    Button(action: {
-                        ratePopoverIsPresented.toggle()
-                    }) {
-                        Image(systemName: "info.circle")
-                            .foregroundColor(.blue)
-                    }
+//                    Button(action: {
+//                        ratePopoverIsPresented.toggle()
+//                    }) {
+//                        Image(systemName: "info.circle")
+//                            .foregroundColor(.blue)
+//                    }
                 }) {
                     HStack {
                         Text("Rate Units")
@@ -63,10 +63,10 @@ struct SettingsView: View {
                     Toggle(isOn: $settings.startButtonHaptics) {
                         Text("Start/Stop Button")
                     }
-                    Toggle(isOn: $settings.startButtonHaptics) {
+                    Toggle(isOn: $settings.lapButtonHaptics) {
                         Text("Lap Button")
                     }
-                    Toggle(isOn: $settings.startButtonHaptics) {
+                    Toggle(isOn: $settings.rateButtonHaptics) {
                         Text("Count & Rate Buttons")
                     }
                     Toggle(isOn: $settings.add5ButtonHaptics) {
@@ -86,20 +86,20 @@ struct SettingsView: View {
                             Text("Support is available in English only.")
                             Spacer()
                         }) {
-                    Link(destination: URL(string: "https://www.apple.com")!) {
-                        HStack {
-                            Image(systemName: "star.circle")
-                                .font(.system(size: 28))
-                            Text("Rate in the App Store")
-                        }
-                    }
-                    Link(destination: URL(string: "https://www.apple.com")!) {
-                        HStack {
-                            Image(systemName: "dollarsign.circle")
-                                .font(.system(size: 28))
-                            Text("Make a Donation")
-                        }
-                    }
+//                    Link(destination: URL(string: "https://www.apple.com")!) {
+//                        HStack {
+//                            Image(systemName: "star.circle")
+//                                .font(.system(size: 28))
+//                            Text("Rate in the App Store")
+//                        }
+//                    }
+//                    Link(destination: URL(string: "https://www.apple.com")!) {
+//                        HStack {
+//                            Image(systemName: "dollarsign.circle")
+//                                .font(.system(size: 28))
+//                            Text("Make a Donation")
+//                        }
+//                    }
                     Link(destination: URL(string: "mailto:wavmaker11@gmail.com")!) {
                         HStack {
                             Image(systemName: "envelope.circle")

@@ -8,17 +8,23 @@
 import Foundation
 import SwiftUI
 
-func hapticSuccess() {
-    let generator = UINotificationFeedbackGenerator()
-    generator.notificationOccurred(.success)
+func hapticSuccess(isOn: Bool) {
+    if isOn {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
 }
 
-func hapticError() {
-    let generator = UINotificationFeedbackGenerator()
-    generator.notificationOccurred(.error)
+func hapticError(isOn: Bool) {
+    if isOn {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+    }
 }
 
-func hapticWarning() {
-    let generator = UINotificationFeedbackGenerator()
-    generator.notificationOccurred(.warning)
+func hapticWarning(isOn: Bool) {
+    if isOn {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+    }
 }

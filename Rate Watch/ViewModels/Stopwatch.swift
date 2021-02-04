@@ -51,7 +51,6 @@ class Stopwatch: ObservableObject {
     @Published var raceIsSaved: Bool = false
     var raceID: Double?
     var raceTimestamp: Date?
-//    var race: Race?
     var lapDataOnLastTap: TempLap?
     
     
@@ -197,8 +196,6 @@ extension Stopwatch {
         /// This function is called whenever the RATE button is tapped
         
         // Call the rate timer to get the stroke rate, based on current rateUnits & rateBase settings
-        print(rateUnits)
-        print(rateBase)
         getRate(units: rateUnits, cycles: rateBase)
     }
     
@@ -238,8 +235,10 @@ extension Stopwatch {
     func onTapSave() {
         /// This function is called whenever the SAVE button is tapped
         
+        // Toggle raceIsSaved to true in order to deactivate the Save button
         raceIsSaved = true
         
+        // Save the Race and Laps to persistent storage
         saveRaceAndLaps()
         
     }
