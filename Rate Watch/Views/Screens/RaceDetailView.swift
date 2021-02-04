@@ -35,6 +35,7 @@ struct RaceDetailView: View {
                         .padding(.vertical, 2)
                 }
             }
+            .padding(.horizontal, 5)
         }
     }
 }

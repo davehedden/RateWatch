@@ -42,6 +42,7 @@ struct LapDisplayRowHeader: View {
                 .fontWeight(.bold)
                 .frame(width: 36, alignment: .trailing)
         }
+        .padding(.horizontal, 5)
     }
 }
 

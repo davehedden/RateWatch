@@ -32,6 +32,7 @@ struct RaceListView: View {
                             if let date = race.timestamp {
                                 Text(date, formatter: dateFormatter)
                             }
+                            
                             if let time = cumTime {
                                 Text(String(time.formattedLapDisplay()))
                             }

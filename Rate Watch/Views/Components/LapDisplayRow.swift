@@ -12,55 +12,54 @@ struct LapDisplayRow: View {
     @State var isExpanded: Bool = false
     
     var body: some View {
-        Button(action: {
-            isExpanded.toggle()
-        }) {
-            VStack {
-                HStack {
-                    LapDisplayCount(num: lap.lapNum)
-                        .foregroundColor(.white)
-                    
-                    LapDisplayTime(time: lap.cumTime, type: .cumulative)
-                        .foregroundColor(.white)
-                    
-                    LapDisplayTime(time: lap.lapTime, type: .lap)
-                        .foregroundColor(.flatYellowCAN)
-                    
-                    LapDisplayTime(time: lap.lapTimeAlternate, type: .lap)
-                        .foregroundColor(.flatYellowUSHL)
-                    
-                    Spacer()
-                    
-                    LapDisplayCount(num: lap.strokeCount)
-                        .foregroundColor(.flatBlueUSHL)
-                    
-                    if lap.rateUnits == K.RateUnits.cyclesPerMinute {
-                        LapDisplayTime(time: lap.medianStrokeRate(), type: .rateCyclesPerMinute)
-                            .foregroundColor(.flatBlueUSHL)
-                    } else {
-                        LapDisplayTime(time: lap.medianStrokeRate(), type: .rateSecondsPerCycle)
-                            .foregroundColor(.flatBlueUSHL)
-                    }
-                    
-                }
-                .padding(.vertical, 0)
+        VStack {
+            HStack {
+                LapDisplayCount(num: lap.lapNum)
+                    .foregroundColor(.white)
                 
-                if isExpanded {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            if let rates = lap.strokeRates {
-                                ForEach(rates, id: \.self) { rate in
-                                    Text(String(rate))
-                                        .font(.system(size: 13))
-                                        .foregroundColor(.flatBlueUSHL)
-                                        .frame(width: 36)
-                                }
+                LapDisplayTime(time: lap.cumTime, type: .cumulative)
+                    .foregroundColor(.white)
+                
+                LapDisplayTime(time: lap.lapTime, type: .lap)
+                    .foregroundColor(.flatYellowCAN)
+                
+                LapDisplayTime(time: lap.lapTimeAlternate, type: .lap)
+                    .foregroundColor(.flatYellowUSHL)
+                
+                Spacer()
+                
+                LapDisplayCount(num: lap.strokeCount)
+                    .foregroundColor(.flatBlueUSHL)
+                
+                if lap.rateUnits == K.RateUnits.cyclesPerMinute {
+                    LapDisplayTime(time: lap.medianStrokeRate(), type: .rateCyclesPerMinute)
+                        .foregroundColor(.flatBlueUSHL)
+                } else {
+                    LapDisplayTime(time: lap.medianStrokeRate(), type: .rateSecondsPerCycle)
+                        .foregroundColor(.flatBlueUSHL)
+                }
+                
+            }
+            .padding(.vertical, 0)
+            .onTapGesture {
+                isExpanded.toggle()
+            }
+            
+            if isExpanded {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        if let rates = lap.strokeRates {
+                            ForEach(rates, id: \.self) { rate in
+                                Text(String(rate))
+                                    .font(.system(size: 13))
+                                    .foregroundColor(.flatBlueUSHL)
+                                    .frame(width: 36)
                             }
                         }
-                        .padding(.vertical, 4)
                     }
-                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
                 }
+                .padding(.horizontal, 10)
             }
         }
     }

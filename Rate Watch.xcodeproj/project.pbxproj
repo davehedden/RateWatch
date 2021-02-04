@@ -46,6 +46,7 @@
 		556F7E1825C9CF0500FD8640 /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1225C9CF0500FD8640 /* Race+CoreDataProperties.swift */; };
 		556F7E1925C9CF0500FD8640 /* Lap+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */; };
 		556F7E1A25C9CF0500FD8640 /* Lap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */; };
+		556F7E3225CC662300FD8640 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F7E3125CC662300FD8640 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		556F7E1225C9CF0500FD8640 /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		556F7E2C25CC661E00FD8640 /* Rate Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rate Watch.entitlements"; sourceTree = "<group>"; };
+		556F7E3125CC662300FD8640 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556F7E3225CC662300FD8640 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,7 @@
 				5526441125AE6B9000111284 /* Rate WatchTests */,
 				5526441C25AE6B9000111284 /* Rate WatchUITests */,
 				552643F925AE6B8F00111284 /* Products */,
+				556F7E3025CC662300FD8640 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +166,7 @@
 		552643FA25AE6B8F00111284 /* Rate Watch */ = {
 			isa = PBXGroup;
 			children = (
+				556F7E2C25CC661E00FD8640 /* Rate Watch.entitlements */,
 				552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */,
 				5526440925AE6B9000111284 /* Info.plist */,
 				552643FF25AE6B9000111284 /* Assets.xcassets */,
@@ -283,6 +289,14 @@
 				55628FB925BA6D5C009DC6BE /* TimeIntervalExtension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		556F7E3025CC662300FD8640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556F7E3125CC662300FD8640 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -590,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -605,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Rate Watch/Rate Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rate Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = 54R7945PDG;
@@ -627,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Rate Watch/Rate Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rate Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = 54R7945PDG;

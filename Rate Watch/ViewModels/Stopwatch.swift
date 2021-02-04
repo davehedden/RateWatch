@@ -340,8 +340,8 @@ extension Stopwatch {
             newLap.lapTime = lap.lapTime
             newLap.lapTimeAlternate = lap.lapTimeAlternate
             newLap.strokeCount = lap.strokeCount
-            newLap.strokeRates = strokeRates
-            newLap.rateUnits = rateUnits
+            newLap.strokeRates = lap.strokeRates
+            newLap.rateUnits = lap.rateUnits
             newLap.race = race
         }
     }
