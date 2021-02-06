@@ -70,8 +70,8 @@ final class Settings: ObservableObject {
         self.startButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.startButtonHaptics) as? Bool ?? true
         self.lapButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.lapButtonHaptics) as? Bool ?? true
         self.rateButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.rateButtonHaptics) as? Bool ?? true
-        self.resetButtonHaptics = defaults.bool(forKey: K.UserDefaultKeys.resetButtonHaptics)
-        self.saveButtonHaptics = defaults.bool(forKey: K.UserDefaultKeys.saveButtonHaptics)
-        self.add5ButtonHaptics = defaults.bool(forKey: K.UserDefaultKeys.add5ButtonHaptics)
+        self.resetButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.resetButtonHaptics) as? Bool ?? true
+        self.saveButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.saveButtonHaptics) as? Bool ?? true
+        self.add5ButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.add5ButtonHaptics) as? Bool ?? true
     }
 }

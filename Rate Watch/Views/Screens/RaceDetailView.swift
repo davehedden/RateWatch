@@ -24,6 +24,7 @@ struct RaceDetailView: View {
             RaceDetailHeader(race: race)
             
             LapDisplayRowHeader()
+                .padding(.trailing, 8)
             
             List {
                 ForEach(laps) { lap in
@@ -32,7 +33,7 @@ struct RaceDetailView: View {
                         .padding(.vertical, 2)
                 }
             }
-            .padding(.horizontal, 5)
+            .padding(.trailing, 10)
             
             Spacer()
         }

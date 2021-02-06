@@ -54,7 +54,7 @@ struct RaceDetailHeader: View {
             }
         }
         .padding(.leading, 20)
-        .padding(.bottom, 10)
+        .padding(.bottom, 20)
     }
 }
 
