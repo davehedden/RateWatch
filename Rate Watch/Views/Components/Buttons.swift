@@ -14,7 +14,7 @@ struct CountAndRateButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapCountAndRate()
-            hapticSuccess(isOn: settings.rateButtonHaptics)
+            hapticWarning(isOn: settings.rateButtonHaptics)
         }) {
             LongRateButton(buttonIconName: "gauge.badge.plus", label: "COUNT & RATE", rateIconName: "\(Int(settings.rateBase)).circle.fill")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -28,7 +28,7 @@ struct CountButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapCount()
-            hapticSuccess(isOn: settings.rateButtonHaptics)
+            hapticWarning(isOn: settings.rateButtonHaptics)
         }) {
             SmallButton(buttonIconName: "plus.circle.fill", label: "COUNT")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -42,7 +42,7 @@ struct RateButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapRate()
-            hapticSuccess(isOn: settings.rateButtonHaptics)
+            hapticWarning(isOn: settings.rateButtonHaptics)
         }) {
             SmallRateButton(buttonIconName: "metronome.fill", label: "RATE", rateIconName: "\(Int(settings.rateBase)).circle.fill")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatBlueCAN, buttonColorPressed: Color.flatBlueCANHL))
@@ -56,7 +56,7 @@ struct StopButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapStop()
-            hapticWarning(isOn: settings.startButtonHaptics)
+            hapticSuccess(isOn: settings.startButtonHaptics)
         }) {
             BigButton(buttonIconName: "stop.fill", label: "STOP")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatRedCAN, buttonColorPressed: Color.flatRedCANHL))
@@ -70,7 +70,7 @@ struct StartButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapStart()
-            hapticWarning(isOn: settings.startButtonHaptics)
+            hapticSuccess(isOn: settings.startButtonHaptics)
         }) {
             BigButton(buttonIconName: "play.fill", label: "START")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatGreenCAN, buttonColorPressed: Color.flatGreenCANHL))
@@ -98,7 +98,7 @@ struct Add5Button: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapAdd5()
-            hapticSuccess(isOn: settings.add5ButtonHaptics)
+            hapticWarning(isOn: settings.add5ButtonHaptics)
         }) {
             SmallButton(buttonIconName: "forward.fill", label: "ADD :05")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatYellowCAN, buttonColorPressed: Color.flatYellowCANHL))
@@ -112,7 +112,7 @@ struct SaveButton: View {
     var body: some View {
         Button(action: {
             stopwatch.onTapSave()
-            hapticSuccess(isOn: settings.saveButtonHaptics)
+            hapticWarning(isOn: settings.saveButtonHaptics)
         }) {
             SmallButton(buttonIconName: "folder.fill.badge.plus", label: "SAVE")
         }.buttonStyle(SolidButtonStyle(buttonColor: Color.flatPurpleUK, buttonColorPressed: Color.flatPurpleUKHL))

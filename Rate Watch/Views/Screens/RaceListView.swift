@@ -9,33 +9,26 @@ import SwiftUI
 
 struct RaceListView: View {
     @Environment(\.presentationMode) var presentationMode
-    
     @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Race.id, ascending: true)],
-        animation: .default)
     
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Race.id, ascending: false)],
+        animation: .default)
     private var races: FetchedResults<Race>
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(races) { race in
-                    let predicate = NSPredicate(format: "raceID == \(race.id)")
-                    
-                    let lastLap = race.laps?.lastObject as? Lap
-                    let cumTime = lastLap?.cumTime
-                    
-                    NavigationLink(destination: RaceDetailView(predicate: predicate)) {
+                    NavigationLink(destination: RaceDetailView(race: race)) {
                         HStack {
                             if let date = race.timestamp {
                                 Text(date, formatter: dateFormatter)
+                                
+                                Text(date, formatter: datetimeFormatter)
                             }
                             
-                            if let time = cumTime {
-                                Text(String(time.formattedLapDisplay()))
-                            }
+                            Text(race.finalTime())
                         }
                     }
                 }
@@ -72,16 +65,10 @@ struct RaceListView: View {
     }
 }
 
-private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct RaceListView_Previews: PreviewProvider {
     static var previews: some View {
         RaceListView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             .preferredColorScheme(.dark)
     }
 }

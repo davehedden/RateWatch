@@ -10,22 +10,19 @@ import SwiftUI
 struct RaceDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Lap.id, ascending: true)], predicate: predicate,
-//        animation: .default)
-    
     var lapsRequest: FetchRequest<Lap>
     var laps: FetchedResults<Lap> { lapsRequest.wrappedValue }
-    var predicate: NSPredicate
+    var race: Race
     
-    init(predicate: NSPredicate) {
-        self.predicate = predicate
-        self.lapsRequest = FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Lap.id, ascending: true)], predicate: predicate, animation: .default)
+    init(race: Race) {
+        self.race = race
+        self.lapsRequest = FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Lap.id, ascending: true)], predicate: NSPredicate(format: "raceID == \(race.id)"), animation: .default)
     }
     
     var body: some View {
-        
-        VStack {
+        VStack(alignment: .leading) {
+            RaceDetailHeader(race: race)
+            
             LapDisplayRowHeader()
             
             List {
@@ -36,13 +33,18 @@ struct RaceDetailView: View {
                 }
             }
             .padding(.horizontal, 5)
+            
+            Spacer()
         }
     }
 }
 
-struct RaceDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        RaceDetailView(predicate: samplePredicate)
-            .preferredColorScheme(.dark)
-    }
-}
+//struct RaceDetailView_Previews: PreviewProvider {
+//    
+//    
+//    static var previews: some View {
+//        RaceDetailView(race: races.first)
+//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//            .preferredColorScheme(.dark)
+//    }
+//}

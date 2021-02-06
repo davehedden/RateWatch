@@ -15,7 +15,7 @@
     <entity name="Race" representedClassName="Race" syncable="YES">
         <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="laps" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Lap" inverseName="race" inverseEntity="Lap"/>
+        <relationship name="laps" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Lap" inverseName="race" inverseEntity="Lap"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="race" inverseEntity="Tag"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES">

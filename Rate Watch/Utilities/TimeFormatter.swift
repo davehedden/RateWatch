@@ -22,5 +22,19 @@ func timeFormatterGenerator(zeroPaddingSetting: DateComponentsFormatter.ZeroForm
     return timeFormatter
 }
 
+let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+//    formatter.timeStyle = .medium
+    return formatter
+}()
+
+let datetimeFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+//    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
+    return formatter
+}()
+
 let timerDisplayFormatter = timeFormatterGenerator(zeroPaddingSetting: .pad)
 let lapTimeFormatter = timeFormatterGenerator(zeroPaddingSetting: .default)
