@@ -37,6 +37,7 @@ struct RaceDetailView: View {
             
             Spacer()
         }
+        .preferredColorScheme(.dark)
     }
 }
 

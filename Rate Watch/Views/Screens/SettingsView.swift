@@ -12,6 +12,7 @@ struct SettingsView: View {
     @ObservedObject var stopwatch: Stopwatch
     @Environment(\.presentationMode) var presentationMode
     @State var ratePopoverIsPresented = false
+    @State var showInstructions = false
     
     var body: some View {
         NavigationView {
@@ -100,6 +101,18 @@ struct SettingsView: View {
 //                            Text("Make a Donation")
 //                        }
 //                    }
+                    Button(action: {
+                        showInstructions.toggle()
+                    }) {
+                        HStack {
+                            Image(systemName: "info.circle")
+                                .font(.system(size: 28))
+                            Text("View Instructions")
+                        }
+                    }
+                    .sheet(isPresented: $showInstructions, content: {
+                        InstructionsView()
+                    })
                     Link(destination: URL(string: "mailto:wavmaker11@gmail.com")!) {
                         HStack {
                             Image(systemName: "envelope.circle")

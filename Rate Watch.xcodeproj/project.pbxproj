@@ -48,6 +48,7 @@
 		556F7E4125CE458C00FD8640 /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E3F25CE458C00FD8640 /* Race+CoreDataClass.swift */; };
 		556F7E4225CE458C00FD8640 /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E4025CE458C00FD8640 /* Race+CoreDataProperties.swift */; };
 		55CD11DD25CF07690073DA2B /* RaceDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */; };
+		55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D38B5B25DDB310001F8339 /* InstructionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		556F7E3F25CE458C00FD8640 /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E4025CE458C00FD8640 /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailHeader.swift; sourceTree = "<group>"; };
+		55D38B5B25DDB310001F8339 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				55628FEE25BA7131009DC6BE /* SettingsView.swift */,
 				55628FF325BA716F009DC6BE /* RaceListView.swift */,
 				55628FFB25BA7197009DC6BE /* RaceDetailView.swift */,
+				55D38B5B25DDB310001F8339 /* InstructionsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */,
 				5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */,
 				55628FAD25BA6C77009DC6BE /* Constants.swift in Sources */,
+				55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */,
 				5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */,
 				552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */,
 				5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */,
@@ -625,7 +629,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Rate Watch/Rate Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Rate Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = 54R7945PDG;
 				ENABLE_PREVIEWS = YES;
@@ -635,7 +639,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.swimportal.Rate-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -650,7 +654,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Rate Watch/Rate Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Rate Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = 54R7945PDG;
 				ENABLE_PREVIEWS = YES;
@@ -660,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.swimportal.Rate-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
