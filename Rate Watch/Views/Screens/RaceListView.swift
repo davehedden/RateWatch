@@ -15,28 +15,46 @@ struct RaceListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Race.id, ascending: false)],
         animation: .default)
     private var races: FetchedResults<Race>
+    @State private var searchText: String = ""
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(races) { race in
-                    NavigationLink(destination: RaceDetailView(race: race)) {
-                        HStack {
-                            if let date = race.timestamp {
-                                Text(date, formatter: dateFormatter)
+            VStack {
+                SearchBar(text: $searchText)
+                
+                List {
+                    ForEach(races) { race in
+                        NavigationLink(destination: RaceDetailView(race: race)) {
+                            if let title = race.title {
+                                if title == "" {
+                                    HStack {
+                                        Text(race.timestamp!, formatter: dateFormatter)
+                                        
+                                        Text(race.timestamp!, formatter: datetimeFormatter)
+                                        
+                                        Text(race.finalTime())
+                                    }
+                                } else {
+                                    Text(title)
+                                }
                                 
-                                Text(date, formatter: datetimeFormatter)
+                            } else {
+                                HStack {
+                                    Text(race.timestamp!, formatter: dateFormatter)
+                                    
+                                    Text(race.timestamp!, formatter: datetimeFormatter)
+                                    
+                                    Text(race.finalTime())
+                                }
                             }
-                            
-                            Text(race.finalTime())
                         }
                     }
+                    .onDelete(perform: deleteRaces)
                 }
-                .onDelete(perform: deleteRaces)
+                .listStyle(PlainListStyle())
             }
             .navigationBarTitle("Saved Data")
 //            .navigationBarItems(trailing: EditButton())
-//                .foregroundColor(.blue)
             .toolbar {
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
@@ -69,6 +87,6 @@ struct RaceListView_Previews: PreviewProvider {
     static var previews: some View {
         RaceListView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }

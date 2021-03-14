@@ -2,7 +2,7 @@
 //  Race+CoreDataProperties.swift
 //  Rate Watch
 //
-//  Created by Dave Hedden on 2/5/21.
+//  Created by Dave Hedden on 2/23/21.
 //
 //
 
@@ -18,8 +18,8 @@ extension Race {
 
     @NSManaged public var id: Double
     @NSManaged public var timestamp: Date?
+    @NSManaged public var title: String?
     @NSManaged public var laps: Set<Lap>?
-    @NSManaged public var tags: Set<Tag>?
 
 }
 
@@ -37,23 +37,6 @@ extension Race {
 
     @objc(removeLaps:)
     @NSManaged public func removeFromLaps(_ values: Set<Lap>)
-
-}
-
-// MARK: Generated accessors for tags
-extension Race {
-
-    @objc(addTagsObject:)
-    @NSManaged public func addToTags(_ value: Tag)
-
-    @objc(removeTagsObject:)
-    @NSManaged public func removeFromTags(_ value: Tag)
-
-    @objc(addTags:)
-    @NSManaged public func addToTags(_ values: Set<Tag>)
-
-    @objc(removeTags:)
-    @NSManaged public func removeFromTags(_ values: Set<Tag>)
 
 }
 

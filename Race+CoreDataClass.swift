@@ -2,7 +2,7 @@
 //  Race+CoreDataClass.swift
 //  Rate Watch
 //
-//  Created by Dave Hedden on 2/5/21.
+//  Created by Dave Hedden on 2/23/21.
 //
 //
 
@@ -68,5 +68,4 @@ public class Race: NSManagedObject {
         let cumTime = self.laps!.map { $0.cumTime }.max()!
         return cumTime.formattedLapDisplay()
     }
-    
 }

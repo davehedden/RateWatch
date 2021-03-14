@@ -9,12 +9,19 @@ import SwiftUI
 
 struct RaceDetailHeader: View {
     let race: Race
+    let titleDisplay: String
     
     var body: some View {
         let (fastestLap, fastestLapIndex, avgLap) = race.fastestAndAverageLap()
         let (fastestAltLap, fastestAltLapIndex, avgAltLap) = race.fastestAndAverageAltLap()
         
         VStack(alignment: .leading) {
+            if let title = race.title {
+                Text(title)
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+            
             HStack {
                 if let date = race.timestamp {
                     Text(date, formatter: dateFormatter)

@@ -17,6 +17,7 @@ struct PersistenceController {
         let newRace = Race(context: viewContext)
         newRace.id = 1.0
         newRace.timestamp = Date()
+        newRace.title = "Test race"
         
         let newLap1 = Lap(context: viewContext)
         newLap1.id = 1.1

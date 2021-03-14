@@ -40,15 +40,15 @@
 		5562903425BA7312009DC6BE /* LapDisplayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903325BA7312009DC6BE /* LapDisplayTime.swift */; };
 		5562903925BA7332009DC6BE /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903825BA7332009DC6BE /* MenuBar.swift */; };
 		5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5562903D25BA7382009DC6BE /* Stopwatch.swift */; };
-		556F7E1525C9CF0500FD8640 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E0F25C9CF0500FD8640 /* Tag+CoreDataClass.swift */; };
-		556F7E1625C9CF0500FD8640 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1025C9CF0500FD8640 /* Tag+CoreDataProperties.swift */; };
 		556F7E1925C9CF0500FD8640 /* Lap+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */; };
 		556F7E1A25C9CF0500FD8640 /* Lap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */; };
 		556F7E3225CC662300FD8640 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F7E3125CC662300FD8640 /* CloudKit.framework */; };
-		556F7E4125CE458C00FD8640 /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E3F25CE458C00FD8640 /* Race+CoreDataClass.swift */; };
-		556F7E4225CE458C00FD8640 /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F7E4025CE458C00FD8640 /* Race+CoreDataProperties.swift */; };
 		55CD11DD25CF07690073DA2B /* RaceDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */; };
 		55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D38B5B25DDB310001F8339 /* InstructionsView.swift */; };
+		55DFC1FD25E578C7006A8E7F /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */; };
+		55DFC1FE25E578C7006A8E7F /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */; };
+		55DFC20325E57DF2006A8E7F /* RenameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC20225E57DF2006A8E7F /* RenameAlert.swift */; };
+		55DFC20F25E6F9BF006A8E7F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,16 +108,16 @@
 		5562903325BA7312009DC6BE /* LapDisplayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayTime.swift; sourceTree = "<group>"; };
 		5562903825BA7332009DC6BE /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		5562903D25BA7382009DC6BE /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
-		556F7E0F25C9CF0500FD8640 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		556F7E1025C9CF0500FD8640 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lap+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		556F7E2C25CC661E00FD8640 /* Rate Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rate Watch.entitlements"; sourceTree = "<group>"; };
 		556F7E3125CC662300FD8640 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		556F7E3F25CE458C00FD8640 /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		556F7E4025CE458C00FD8640 /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailHeader.swift; sourceTree = "<group>"; };
 		55D38B5B25DDB310001F8339 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		55DFC20225E57DF2006A8E7F /* RenameAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameAlert.swift; sourceTree = "<group>"; };
+		55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +247,8 @@
 				5562903325BA7312009DC6BE /* LapDisplayTime.swift */,
 				55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */,
 				5562903825BA7332009DC6BE /* MenuBar.swift */,
+				55DFC20225E57DF2006A8E7F /* RenameAlert.swift */,
+				55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -263,10 +265,8 @@
 		55628F8025B533AF009DC6BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				556F7E3F25CE458C00FD8640 /* Race+CoreDataClass.swift */,
-				556F7E4025CE458C00FD8640 /* Race+CoreDataProperties.swift */,
-				556F7E0F25C9CF0500FD8640 /* Tag+CoreDataClass.swift */,
-				556F7E1025C9CF0500FD8640 /* Tag+CoreDataProperties.swift */,
+				55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */,
+				55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */,
 				556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */,
 				556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */,
 				55628FB425BA6D03009DC6BE /* Settings.swift */,
@@ -435,12 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				556F7E4125CE458C00FD8640 /* Race+CoreDataClass.swift in Sources */,
 				5562901625BA7239009DC6BE /* Buttons.swift in Sources */,
 				55628FEF25BA7131009DC6BE /* SettingsView.swift in Sources */,
 				55628FFC25BA7197009DC6BE /* RaceDetailView.swift in Sources */,
 				55628FDD25BA7025009DC6BE /* Haptics.swift in Sources */,
 				5562903425BA7312009DC6BE /* LapDisplayTime.swift in Sources */,
+				55DFC20F25E6F9BF006A8E7F /* SearchBar.swift in Sources */,
 				55CD11DD25CF07690073DA2B /* RaceDetailHeader.swift in Sources */,
 				5562901B25BA725B009DC6BE /* LapDisplay.swift in Sources */,
 				5562901125BA7215009DC6BE /* ButtonTemplates.swift in Sources */,
@@ -448,10 +448,10 @@
 				55628FC225BA6D9D009DC6BE /* TestData.swift in Sources */,
 				5526440525AE6B9000111284 /* PersistenceController.swift in Sources */,
 				5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */,
+				55DFC1FE25E578C7006A8E7F /* Race+CoreDataProperties.swift in Sources */,
 				5562900C25BA71F1009DC6BE /* ButtonDisplay.swift in Sources */,
 				55628FB525BA6D03009DC6BE /* Settings.swift in Sources */,
-				556F7E4225CE458C00FD8640 /* Race+CoreDataProperties.swift in Sources */,
-				556F7E1525C9CF0500FD8640 /* Tag+CoreDataClass.swift in Sources */,
+				55DFC20325E57DF2006A8E7F /* RenameAlert.swift in Sources */,
 				5526443025AE6C3B00111284 /* Data.xcdatamodeld in Sources */,
 				55628FBA25BA6D5C009DC6BE /* TimeIntervalExtension.swift in Sources */,
 				556F7E1925C9CF0500FD8640 /* Lap+CoreDataClass.swift in Sources */,
@@ -463,10 +463,10 @@
 				55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */,
 				5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */,
 				552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */,
+				55DFC1FD25E578C7006A8E7F /* Race+CoreDataClass.swift in Sources */,
 				5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */,
 				552B165725C8731400AEB806 /* TempLap.swift in Sources */,
 				55628FEA25BA70FB009DC6BE /* StopwatchView.swift in Sources */,
-				556F7E1625C9CF0500FD8640 /* Tag+CoreDataProperties.swift in Sources */,
 				55628FC825BA6F38009DC6BE /* ColorExtension.swift in Sources */,
 				556F7E1A25C9CF0500FD8640 /* Lap+CoreDataProperties.swift in Sources */,
 				5562903925BA7332009DC6BE /* MenuBar.swift in Sources */,
