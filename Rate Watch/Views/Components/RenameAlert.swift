@@ -19,18 +19,22 @@ struct RenameAlert: View {
     
     var body: some View {
         VStack {
-            Text("Enter New Title")
+            Text("Rename Title")
                 .font(.headline)
             
             TextField("", text: $text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Divider()
-                .background(Color(.darkGray))
+                .background(Color(.systemGray))
             
             HStack {
                 Button(action: {
+                    // Dismiss the alert
                     isPresented = false
+                    
+                    // Dismiss the keyboard
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     Text("CANCEL")
                         .font(.headline)
@@ -40,10 +44,15 @@ struct RenameAlert: View {
                 .frame(width: (screenSize.width * 0.7 / 2.5))
                 
                 Divider()
-                    .background(Color(.lightGray))
+                    .background(Color(.systemGray))
                 
                 Button(action: {
+                    // Dismiss the alert
                     isPresented = false
+                    
+                    // Dismiss the keyboard
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    
                     race.title = text
                     titleDisplay = text
                     do {
@@ -65,7 +74,7 @@ struct RenameAlert: View {
         }
         .padding()
         .frame(width: screenSize.width * 0.7, height: screenSize.height * 0.2)
-        .background(Color(.darkGray))
+        .background(Color(.systemGray4))
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .offset(y: isPresented ? 0 : screenSize.height)
         .animation(.default)

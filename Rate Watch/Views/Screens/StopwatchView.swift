@@ -22,13 +22,13 @@ struct StopwatchView: View {
             
             Divider()
                 .frame(height: 1)
-                .background(Color.flatGrayCAN)
+                .background(Color(.systemGray4))
             
             ButtonDisplay(settings: settings, stopwatch: stopwatch)
             
             Divider()
                 .frame(height: 1)
-                .background(Color.flatGrayCAN)
+                .background(Color(.systemGray4))
             
             LapDisplay(stopwatch: stopwatch)
             
@@ -36,7 +36,7 @@ struct StopwatchView: View {
             
             Divider()
                 .frame(height: 1)
-                .background(Color.flatGrayCAN)
+                .background(Color(.systemGray4))
             
             MenuBar(settings: settings, stopwatch: stopwatch)
             

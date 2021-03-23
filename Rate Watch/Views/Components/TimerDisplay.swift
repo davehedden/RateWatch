@@ -75,6 +75,6 @@ struct TimerLabel: View {
         Text(label)
             .font(.system(size: 14))
             .italic()
-            .foregroundColor(.flatGrayCANHL)
+            .foregroundColor(Color(.systemGray2))
     }
 }

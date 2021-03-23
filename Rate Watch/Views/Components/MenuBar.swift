@@ -22,7 +22,7 @@ struct MenuBar: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
-                    .foregroundColor(.flatSilverCAN)
+                    .foregroundColor(Color(.systemGray))
             }
             .sheet(isPresented: $showSaves, content: {
                 RaceListView()
@@ -38,7 +38,7 @@ struct MenuBar: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 20, height: 20)
-                        .foregroundColor(.flatSilverCAN)
+                        .foregroundColor(Color(.systemGray))
                 }
                 .sheet(isPresented: $showSettings, content: {
                     SettingsView(settings: settings, stopwatch: stopwatch)
