@@ -20,6 +20,10 @@ extension Race {
     @NSManaged public var timestamp: Date?
     @NSManaged public var title: String?
     @NSManaged public var laps: Set<Lap>?
+    
+    public var defaultTitle: String {
+        "\(dateFormatter.string(from: timestamp!)) \(datetimeFormatter.string(from: timestamp!)) \(self.finalTime())"
+    }
 
 }
 

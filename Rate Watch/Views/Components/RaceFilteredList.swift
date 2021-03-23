@@ -28,7 +28,15 @@ struct RaceFilteredList: View {
         List {
             ForEach(races, id: \.self) { race in
                 NavigationLink(destination: RaceDetailView(race: race)) {
-                    Text(race.title!)
+                    if let title = race.title {
+                        if title == "" {
+                            Text(race.defaultTitle)
+                        } else {
+                            Text(title)
+                        }
+                    } else {
+                        Text(race.defaultTitle)
+                    }
                 }
             }
             .onDelete(perform: deleteRaces)

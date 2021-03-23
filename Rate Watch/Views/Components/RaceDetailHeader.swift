@@ -16,7 +16,7 @@ struct RaceDetailHeader: View {
         let (fastestAltLap, fastestAltLapIndex, avgAltLap) = race.fastestAndAverageAltLap()
         
         VStack(alignment: .leading) {
-            Text(race.title!)
+            Text(race.title ?? race.defaultTitle)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.bottom, 4)

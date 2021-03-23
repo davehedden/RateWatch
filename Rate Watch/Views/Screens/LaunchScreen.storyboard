@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aXx-bZ-3aT">
+            <objects>
+                <viewController id="Fph-xb-oJq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FVx-4C-Rc2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RateWatchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-S5-u23">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="va8-op-hSb"/>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.67450980392156867" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VM1-S5-u23" firstAttribute="leading" secondItem="va8-op-hSb" secondAttribute="leading" constant="87" id="0cg-22-T2j"/>
+                            <constraint firstItem="va8-op-hSb" firstAttribute="trailing" secondItem="VM1-S5-u23" secondAttribute="trailing" constant="87" id="4Q4-Hn-3Pz"/>
+                            <constraint firstItem="VM1-S5-u23" firstAttribute="top" secondItem="va8-op-hSb" secondAttribute="top" constant="284" id="AG7-zc-78V"/>
+                            <constraint firstItem="va8-op-hSb" firstAttribute="bottom" secondItem="VM1-S5-u23" secondAttribute="bottom" constant="294" id="UqO-jH-rYa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQz-9a-FOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="-62.276785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RateWatchIcon" width="256" height="256"/>
+    </resources>
+</document>

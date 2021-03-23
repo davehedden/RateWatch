@@ -50,6 +50,7 @@
 		55E80F4D26090B450026076B /* RaceFilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F4C26090B450026076B /* RaceFilteredList.swift */; };
 		55E80F62260A67560026076B /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F60260A67560026076B /* Race+CoreDataClass.swift */; };
 		55E80F63260A67560026076B /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F61260A67560026076B /* Race+CoreDataProperties.swift */; };
+		55E80F68260A79640026076B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E80F67260A79640026076B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		55E80F4C26090B450026076B /* RaceFilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceFilteredList.swift; sourceTree = "<group>"; };
 		55E80F60260A67560026076B /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		55E80F61260A67560026076B /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		55E80F67260A79640026076B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				55628FF325BA716F009DC6BE /* RaceListView.swift */,
 				55628FFB25BA7197009DC6BE /* RaceDetailView.swift */,
 				55D38B5B25DDB310001F8339 /* InstructionsView.swift */,
+				55E80F67260A79640026076B /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5526440325AE6B9000111284 /* Preview Assets.xcassets in Resources */,
+				55E80F68260A79640026076B /* LaunchScreen.storyboard in Resources */,
 				55628FD325BA6FF4009DC6BE /* alarm clock.ttf in Resources */,
 				5526440025AE6B9000111284 /* Assets.xcassets in Resources */,
 			);
