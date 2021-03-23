@@ -352,6 +352,7 @@ extension Stopwatch {
         if let newID = raceID, let newTimestamp = raceTimestamp {
             newRace.id = newID
             newRace.timestamp = newTimestamp
+            newRace.title = "\(dateFormatter.string(from: newTimestamp)) \(datetimeFormatter.string(from: newTimestamp)) \(cumTimeOnLastTap.formattedLapDisplay())"
         }
         
         createLaps(lapArray: tempLapArray, race: newRace)

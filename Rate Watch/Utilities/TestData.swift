@@ -61,15 +61,3 @@ var sampleLapArray4 = [
 ]
 
 var samplePredicate = NSPredicate(format: "raceID == 2.0")
-
-//var sampleRace1 = Race(id: 1.0, laps: sampleLapArray1)
-//var sampleRace2 = Race(id: 2.0, laps: sampleLapArray2)
-//var sampleRace3 = Race(id: 3.0, laps: sampleLapArray3)
-//var sampleRace4 = Race(id: 4.0, laps: sampleLapArray4)
-
-//var sampleRaceArray1 = [
-//    sampleRace1,
-//    sampleRace2,
-//    sampleRace3,
-//    sampleRace4
-//]

@@ -16,29 +16,29 @@ struct RaceDetailHeader: View {
         let (fastestAltLap, fastestAltLapIndex, avgAltLap) = race.fastestAndAverageAltLap()
         
         VStack(alignment: .leading) {
-            if let title = race.title {
-                Text(title)
-                    .font(.title)
+            Text(race.title!)
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.bottom, 4)
+            
+            VStack(alignment: .leading, spacing: 1) {
+                HStack {
+                    if let date = race.timestamp {
+                        Text(date, formatter: dateFormatter)
+                            .font(.headline)
+                            .fontWeight(.bold)
+
+                        Text(date, formatter: datetimeFormatter)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                    }
+                }
+                
+                Text("Final Time: \(race.finalTime())")
+                    .font(.headline)
                     .fontWeight(.bold)
             }
-            
-            HStack {
-                if let date = race.timestamp {
-                    Text(date, formatter: dateFormatter)
-                        .font(.title)
-                        .fontWeight(.bold)
-
-                    Text(date, formatter: datetimeFormatter)
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-            }
-            .padding(.bottom, 10)
-    
-            Text("Final Time: \(race.finalTime())")
-                .font(.headline)
-                .fontWeight(.bold)
-                .padding(.bottom, 1)
+            .padding(.bottom, 1)
             
             HStack(spacing: 30) {
                 VStack(alignment: .leading) {

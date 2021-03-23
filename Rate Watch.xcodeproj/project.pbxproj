@@ -45,10 +45,11 @@
 		556F7E3225CC662300FD8640 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F7E3125CC662300FD8640 /* CloudKit.framework */; };
 		55CD11DD25CF07690073DA2B /* RaceDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */; };
 		55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D38B5B25DDB310001F8339 /* InstructionsView.swift */; };
-		55DFC1FD25E578C7006A8E7F /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */; };
-		55DFC1FE25E578C7006A8E7F /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */; };
 		55DFC20325E57DF2006A8E7F /* RenameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC20225E57DF2006A8E7F /* RenameAlert.swift */; };
 		55DFC20F25E6F9BF006A8E7F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */; };
+		55E80F4D26090B450026076B /* RaceFilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F4C26090B450026076B /* RaceFilteredList.swift */; };
+		55E80F62260A67560026076B /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F60260A67560026076B /* Race+CoreDataClass.swift */; };
+		55E80F63260A67560026076B /* Race+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80F61260A67560026076B /* Race+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +115,11 @@
 		556F7E3125CC662300FD8640 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailHeader.swift; sourceTree = "<group>"; };
 		55D38B5B25DDB310001F8339 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
-		55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		55DFC20225E57DF2006A8E7F /* RenameAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameAlert.swift; sourceTree = "<group>"; };
 		55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		55E80F4C26090B450026076B /* RaceFilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceFilteredList.swift; sourceTree = "<group>"; };
+		55E80F60260A67560026076B /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		55E80F61260A67560026076B /* Race+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				5562902E25BA72F1009DC6BE /* LapDisplayCount.swift */,
 				5562903325BA7312009DC6BE /* LapDisplayTime.swift */,
 				55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */,
+				55E80F4C26090B450026076B /* RaceFilteredList.swift */,
 				5562903825BA7332009DC6BE /* MenuBar.swift */,
 				55DFC20225E57DF2006A8E7F /* RenameAlert.swift */,
 				55DFC20E25E6F9BF006A8E7F /* SearchBar.swift */,
@@ -265,8 +268,8 @@
 		55628F8025B533AF009DC6BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				55DFC1FB25E578C7006A8E7F /* Race+CoreDataClass.swift */,
-				55DFC1FC25E578C7006A8E7F /* Race+CoreDataProperties.swift */,
+				55E80F60260A67560026076B /* Race+CoreDataClass.swift */,
+				55E80F61260A67560026076B /* Race+CoreDataProperties.swift */,
 				556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */,
 				556F7E1425C9CF0500FD8640 /* Lap+CoreDataProperties.swift */,
 				55628FB425BA6D03009DC6BE /* Settings.swift */,
@@ -448,7 +451,6 @@
 				55628FC225BA6D9D009DC6BE /* TestData.swift in Sources */,
 				5526440525AE6B9000111284 /* PersistenceController.swift in Sources */,
 				5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */,
-				55DFC1FE25E578C7006A8E7F /* Race+CoreDataProperties.swift in Sources */,
 				5562900C25BA71F1009DC6BE /* ButtonDisplay.swift in Sources */,
 				55628FB525BA6D03009DC6BE /* Settings.swift in Sources */,
 				55DFC20325E57DF2006A8E7F /* RenameAlert.swift in Sources */,
@@ -459,13 +461,15 @@
 				552B167925C8C67D00AEB806 /* TempLapDisplayRow.swift in Sources */,
 				55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */,
 				5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */,
+				55E80F63260A67560026076B /* Race+CoreDataProperties.swift in Sources */,
 				55628FAD25BA6C77009DC6BE /* Constants.swift in Sources */,
+				55E80F4D26090B450026076B /* RaceFilteredList.swift in Sources */,
 				55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */,
 				5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */,
 				552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */,
-				55DFC1FD25E578C7006A8E7F /* Race+CoreDataClass.swift in Sources */,
 				5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */,
 				552B165725C8731400AEB806 /* TempLap.swift in Sources */,
+				55E80F62260A67560026076B /* Race+CoreDataClass.swift in Sources */,
 				55628FEA25BA70FB009DC6BE /* StopwatchView.swift in Sources */,
 				55628FC825BA6F38009DC6BE /* ColorExtension.swift in Sources */,
 				556F7E1A25C9CF0500FD8640 /* Lap+CoreDataProperties.swift in Sources */,

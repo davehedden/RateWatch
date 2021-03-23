@@ -19,12 +19,6 @@ struct SettingsView: View {
             Form {
                 Section(header: HStack {
                     Text("Rate Options")
-//                    Button(action: {
-//                        ratePopoverIsPresented.toggle()
-//                    }) {
-//                        Image(systemName: "info.circle")
-//                            .foregroundColor(.blue)
-//                    }
                 }) {
                     HStack {
                         Text("Rate Units")

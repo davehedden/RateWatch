@@ -31,7 +31,6 @@ public class Lap: NSManagedObject {
         }
     }
     
-    
     func medianStrokeRate() -> TimeInterval {
         if let rates = strokeRates {
             if rates.count > 0 {

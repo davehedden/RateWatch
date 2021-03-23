@@ -2,7 +2,7 @@
 //  Race+CoreDataClass.swift
 //  Rate Watch
 //
-//  Created by Dave Hedden on 2/23/21.
+//  Created by Dave Hedden on 3/23/21.
 //
 //
 
