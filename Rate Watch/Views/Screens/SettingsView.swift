@@ -75,6 +75,16 @@ struct SettingsView: View {
                     }
                 }
                 
+                Section(header: HStack {
+                    Text("Layout")
+                }) {
+                    HStack {
+                        Toggle(isOn: $settings.buttonsFlippedHorizontally) {
+                            Text("Flip Buttons Horizontally")
+                        }
+                    }
+                }
+                
                 Section(header: Text("Support"),
                         footer: HStack {
                             Spacer()

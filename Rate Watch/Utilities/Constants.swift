@@ -46,5 +46,6 @@ struct K {
         static let resetButtonHaptics = "ResetButtonHaptics"
         static let saveButtonHaptics = "SaveButtonHaptics"
         static let add5ButtonHaptics = "Add5ButtonHaptics"
+        static let buttonsFlippedHorizontally = "ButtonsFlippedHorizontally"
     }
 }

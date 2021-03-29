@@ -37,7 +37,7 @@ struct RenameAlert: View {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     Text("CANCEL")
-                        .font(.headline)
+                        .font(.system(size: 20))
                         .fontWeight(.light)
                         .foregroundColor(.flatRedCAN)
                 }
@@ -65,7 +65,7 @@ struct RenameAlert: View {
                     }
                 }) {
                     Text("SAVE")
-                        .font(.headline)
+                        .font(.system(size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(.flatGreenCAN)
                 }

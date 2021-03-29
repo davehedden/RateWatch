@@ -17,10 +17,11 @@ struct RaceDetailHeader: View {
         
         VStack(alignment: .leading) {
             Text(race.title ?? race.defaultTitle)
-                .font(.title)
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding(.bottom, 4)
-            
+                
+
             VStack(alignment: .leading, spacing: 1) {
                 HStack {
                     if let date = race.timestamp {
@@ -40,7 +41,7 @@ struct RaceDetailHeader: View {
             }
             .padding(.bottom, 1)
             
-            HStack(spacing: 30) {
+            HStack(alignment: .top, spacing: 30) {
                 VStack(alignment: .leading) {
                     Text("Fastest Lap: \(fastestLap) (\(fastestLapIndex))")
                         .font(.footnote)
@@ -64,6 +65,28 @@ struct RaceDetailHeader: View {
         .padding(.bottom, 20)
     }
 }
+
+//struct AdaptingStack<Content>: View where Content: View {
+//  init(@ViewBuilder content: @escaping () -> Content) {
+//    self.content = content
+//  }
+//
+//  var content: () -> Content
+//  @Environment(\.sizeCategory) var sizeCategory
+//
+//    var body: some View {
+//      switch sizeCategory {
+//      case .accessibilityLarge,
+//           .accessibilityExtraLarge,
+//           .accessibilityExtraExtraLarge,
+//           .accessibilityExtraExtraExtraLarge:
+//        return AnyView(VStack(content: self.content).padding(.top, 10))
+//      default:
+//        return AnyView(HStack(spacing: 30, content: self.content))
+//      }
+//    }
+//}
+
 
 //struct RaceDetailHeader_Previews: PreviewProvider {
 //    static var previews: some View {

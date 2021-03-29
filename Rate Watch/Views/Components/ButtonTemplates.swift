@@ -21,7 +21,7 @@ struct BigButton: View {
                         .frame(width: 40, height: 40)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Text(label)
-                        .font(.headline)
+                        .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                 }
@@ -46,7 +46,7 @@ struct SmallButton: View {
                         .frame(width: 20, height: 20)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Text(label)
-                        .font(.headline)
+                        .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                 }
@@ -72,11 +72,11 @@ struct SmallRateButton: View {
                         .frame(width: 20, height: 20)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Text(label)
-                        .font(.headline)
+                        .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Image(systemName: rateIconName)
-                        .font(Font.system(.headline).bold())
+                        .font(Font.system(size: 20).bold())
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                 }
                 
@@ -101,7 +101,7 @@ struct SmallButtonInactive: View {
                         .foregroundColor(.black)
 
                     Text(label)
-                        .font(.headline)
+                        .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .foregroundColor(.black)
 
@@ -128,7 +128,7 @@ struct LongRateButton: View {
                         .frame(width: 20, height: 20)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Text(label)
-                        .font(.headline)
+                        .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .shadow(color: .black, radius: 1, x: 1, y: 1.25)
                     Image(systemName: rateIconName)

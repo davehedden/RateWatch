@@ -31,39 +31,73 @@ struct ButtonDisplay: View {
             }.frame(height: 65)
             
             // Row containing Start/Stop & Reset buttons
-            HStack(spacing: 20) {
-                // Start or Stop button
-                if stopwatch.timerStatus == .running {
-                    StopButton(settings: settings, stopwatch: stopwatch)
-                } else {
-                    StartButton(settings: settings, stopwatch: stopwatch)
-                }
-                
-                // Lap or Add5/Save & Reset buttons
-                if stopwatch.timerStatus == .running {
-                    LapButton(settings: settings, stopwatch: stopwatch)
-                } else {
-                    VStack(spacing: 20) {
-                        
-                        if stopwatch.timerStatus == .initial {
-                            // Add 5 button
-                            Add5Button(settings: settings, stopwatch: stopwatch)
-                        } else {
-                            if stopwatch.raceIsSaved == false {
-                                SaveButton(settings: settings, stopwatch: stopwatch)
+            if settings.buttonsFlippedHorizontally {
+                HStack(spacing: 20) {
+                    // Start or Stop button
+                    // Lap or Add5/Save & Reset buttons
+                    if stopwatch.timerStatus == .running {
+                        LapButton(settings: settings, stopwatch: stopwatch)
+                    } else {
+                        VStack(spacing: 20) {
+                            
+                            if stopwatch.timerStatus == .initial {
+                                // Add 5 button
+                                Add5Button(settings: settings, stopwatch: stopwatch)
                             } else {
-                                SaveButtonInactive()
+                                if stopwatch.raceIsSaved == false {
+                                    SaveButton(settings: settings, stopwatch: stopwatch)
+                                } else {
+                                    SaveButtonInactive()
+                                }
                             }
-                        }
-                        
-                        ResetButton(settings: settings, stopwatch: stopwatch)
-                        
-                    }.frame(height: 130)
+                            
+                            ResetButton(settings: settings, stopwatch: stopwatch)
+                            
+                        }.frame(height: 130)
+                    }
+                    
+                    if stopwatch.timerStatus == .running {
+                        StopButton(settings: settings, stopwatch: stopwatch)
+                    } else {
+                        StartButton(settings: settings, stopwatch: stopwatch)
+                    }
                 }
+                .padding(.top, 20)
+                .padding(.bottom, 10)
+            } else {
+                HStack(spacing: 20) {
+                    // Start or Stop button
+                    if stopwatch.timerStatus == .running {
+                        StopButton(settings: settings, stopwatch: stopwatch)
+                    } else {
+                        StartButton(settings: settings, stopwatch: stopwatch)
+                    }
+                    
+                    // Lap or Add5/Save & Reset buttons
+                    if stopwatch.timerStatus == .running {
+                        LapButton(settings: settings, stopwatch: stopwatch)
+                    } else {
+                        VStack(spacing: 20) {
+                            
+                            if stopwatch.timerStatus == .initial {
+                                // Add 5 button
+                                Add5Button(settings: settings, stopwatch: stopwatch)
+                            } else {
+                                if stopwatch.raceIsSaved == false {
+                                    SaveButton(settings: settings, stopwatch: stopwatch)
+                                } else {
+                                    SaveButtonInactive()
+                                }
+                            }
+                            
+                            ResetButton(settings: settings, stopwatch: stopwatch)
+                            
+                        }.frame(height: 130)
+                    }
+                }
+                .padding(.top, 20)
+                .padding(.bottom, 10)
             }
-            .padding(.top, 20)
-            .padding(.bottom, 10)
-            
         }
         .padding(.top, 10)
     }

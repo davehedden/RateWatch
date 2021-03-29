@@ -20,7 +20,7 @@ struct TimerDisplay: View {
                 Spacer()
                 
                 Text(stopwatch.cumTimeDisplay)
-                    .font(Font.custom("alarm clock", size: 64))
+                    .font(Font.custom("alarm clock", fixedSize: 64))
                 
                 TimerLabel(label: "Total")
                 
@@ -32,10 +32,10 @@ struct TimerDisplay: View {
                 Spacer()
                 
                 Text(String(format: "%03d", stopwatch.lapCount))
-                    .font(Font.custom("alarm clock", size: 20))
+                    .font(Font.custom("alarm clock", fixedSize: 20))
                 
                 Text(stopwatch.lapTimeDisplay)
-                    .font(Font.custom("alarm clock", size: 52))
+                    .font(Font.custom("alarm clock", fixedSize: 52))
                 
                 TimerLabel(label: "Lap  ")
                 
@@ -46,12 +46,12 @@ struct TimerDisplay: View {
                 TimerLabel(label: "Count")
                 
                 Text(String(format: "%02d", stopwatch.strokeCount))
-                    .font(Font.custom("alarm clock", size: 36))
+                    .font(Font.custom("alarm clock", fixedSize: 36))
                 
                 Spacer()
                 
                 Text(stopwatch.strokeRate.formattedRateDisplay(units: settings.rateUnits))
-                    .font(Font.custom("alarm clock", size: 36))
+                    .font(Font.custom("alarm clock", fixedSize: 36))
                 
                 TimerLabel(label: "Rate ")
                 
