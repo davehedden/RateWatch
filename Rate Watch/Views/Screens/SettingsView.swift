@@ -93,16 +93,9 @@ struct SettingsView: View {
                         }) {
 //                    Link(destination: URL(string: "https://www.apple.com")!) {
 //                        HStack {
-//                            Image(systemName: "star.circle")
-//                                .font(.system(size: 28))
-//                            Text("Rate in the App Store")
-//                        }
-//                    }
-//                    Link(destination: URL(string: "https://www.apple.com")!) {
-//                        HStack {
 //                            Image(systemName: "dollarsign.circle")
 //                                .font(.system(size: 28))
-//                            Text("Make a Donation")
+//                            Text("Tip the Developer")
 //                        }
 //                    }
                     Button(action: {
@@ -122,6 +115,13 @@ struct SettingsView: View {
                             Image(systemName: "envelope.circle")
                                 .font(.system(size: 28))
                             Text("Contact the Developer")
+                        }
+                    }
+                    Link(destination: URL(string: "https://apps.apple.com/us/app/stroke-rate-stopwatch/id1552252450")!) {
+                        HStack {
+                            Image(systemName: "star.circle")
+                                .font(.system(size: 28))
+                            Text("Rate in the App Store")
                         }
                     }
                 }
