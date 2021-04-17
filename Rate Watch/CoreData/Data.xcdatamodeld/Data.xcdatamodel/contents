@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Lap" representedClassName="Lap" syncable="YES">
         <attribute name="cumTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="lapTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="lapTimeAlternate" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="raceID" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="rateUnits" attributeType="String"/>
+        <attribute name="rateUnits" optional="YES" attributeType="String"/>
         <attribute name="storedLapNum" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="storedStrokeCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="strokeRates" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Double]"/>
+        <attribute name="strokeRates" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Double]"/>
         <relationship name="race" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Race" inverseName="laps" inverseEntity="Race"/>
     </entity>
     <entity name="Race" representedClassName="Race" syncable="YES">
         <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="laps" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Lap" inverseName="race" inverseEntity="Lap"/>
     </entity>
