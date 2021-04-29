@@ -61,11 +61,11 @@ struct SettingsView: View {
                     Text("See instructions for use.")
                     Spacer()
                 }) {
-                    Toggle(isOn: $settings.quickTapAddsHalfStroke) {
-                        Text("Quick Tap Adds Half Stroke")
+                    Toggle(isOn: $settings.automateHalfStrokes) {
+                        Text("Auto Half Stroke Mode")
                     }
-                    .onChange(of: settings.quickTapAddsHalfStroke, perform: { value in
-                        stopwatch.quickTapOn = value
+                    .onChange(of: settings.automateHalfStrokes, perform: { value in
+                        stopwatch.autoHalfStrokeModeOn = value
                     })
                 }
                 

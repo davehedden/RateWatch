@@ -45,8 +45,10 @@ class Stopwatch: ObservableObject {
     var strokeRates: [TimeInterval] = []
     var rateUnits: String = defaults.object(forKey: K.UserDefaultKeys.rateUnits) as? String ?? K.RateUnits.secondsPerCycle
     var rateBase: Double = defaults.object(forKey: K.UserDefaultKeys.rateBase) as? Double ?? 3.0
-    var quickTapOn: Bool = defaults.object(forKey: K.UserDefaultKeys.quickTapAddsHalfStroke) as? Bool ?? false
-    var timeOnTapCount: TimeInterval = 0
+    var autoHalfStrokeModeOn: Bool = defaults.object(forKey: K.UserDefaultKeys.automateHalfStrokes) as? Bool ?? false
+    var timeOnLastTapCount: TimeInterval = 0
+    var lastCountInterval: TimeInterval = 0
+    var halfStrokesEnabled: Bool = false
     
     // MARK: Save Functionality Properties
     @Published var tempLapArray: [TempLap] = []
@@ -169,21 +171,31 @@ extension Stopwatch {
     }
     
     func onTapCount() {
-        print(quickTapOn)
-        
         /// This function is called whenever the COUNT button is tapped
-        if quickTapOn {
-            let now = CACurrentMediaTime().truncate(toPlaces: 2)
-            let secondsSinceTapCount = now - timeOnTapCount
-            
-            if secondsSinceTapCount < 0.5 {
-                strokeCount += 0.5
-            } else {
+        if autoHalfStrokeModeOn {
+            if timeOnLastTapCount == 0 {
                 strokeCount += 1
+                timeOnLastTapCount = CACurrentMediaTime().truncate(toPlaces: 2)
+            } else {
+                let now = CACurrentMediaTime().truncate(toPlaces: 2)
+                let currentCountInterval = now - timeOnLastTapCount
+                
+                if halfStrokesEnabled {
+                    strokeCount += 0.5
+                } else {
+                    if currentCountInterval < (0.7 * lastCountInterval) {
+                        halfStrokesEnabled = true
+                        strokeCount += 0.5
+                    } else {
+                        strokeCount += 1
+                    }
+                }
+                
+                // Update the timestamp of when the count button was last pressed
+                timeOnLastTapCount = now
+                lastCountInterval = currentCountInterval
             }
             
-            // Update the timestamp of when the count button was last pressed
-            timeOnTapCount = now
         } else {
             // Increment the stroke count by 1
             strokeCount += 1
@@ -211,8 +223,7 @@ extension Stopwatch {
     
     func onTapRate() {
         /// This function is called whenever the RATE button is tapped
-        print(rateBase)
-        print(rateUnits)
+
         // Call the rate timer to get the stroke rate, based on current rateUnits & rateBase settings
         getRate(units: rateUnits, cycles: rateBase)
     }
@@ -243,6 +254,9 @@ extension Stopwatch {
         strokeRate = 0
         timeOnTapRate = 0
         strokeRates.removeAll()
+        timeOnLastTapCount = 0
+        lastCountInterval = 0
+        halfStrokesEnabled = false
         
         // Saved Data
         tempLapArray.removeAll()
@@ -299,6 +313,13 @@ extension Stopwatch {
         
         // Clear the stroke rate array so that stroke rates from the previous lap do not get added to the current lap data
         strokeRates.removeAll()
+        
+        // Reset count button intervals
+        timeOnLastTapCount = 0
+        lastCountInterval = 0
+        
+        // Deactivate half strokes
+        halfStrokesEnabled = false
     }
 }
 
