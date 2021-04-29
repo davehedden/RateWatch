@@ -39,12 +39,14 @@ class Stopwatch: ObservableObject {
     var lapTimesArray: [TimeInterval] = []
     
     // MARK: Stroke Count & Stroke Rate Properties
-    @Published var strokeCount: Int = 0
+    @Published var strokeCount: Double = 0
     @Published var strokeRate: TimeInterval = 0
     var timeOnTapRate: TimeInterval = 0
     var strokeRates: [TimeInterval] = []
     var rateUnits: String = defaults.object(forKey: K.UserDefaultKeys.rateUnits) as? String ?? K.RateUnits.secondsPerCycle
     var rateBase: Double = defaults.object(forKey: K.UserDefaultKeys.rateBase) as? Double ?? 3.0
+    var quickTapOn: Bool = defaults.object(forKey: K.UserDefaultKeys.quickTapAddsHalfStroke) as? Bool ?? false
+    var timeOnTapCount: TimeInterval = 0
     
     // MARK: Save Functionality Properties
     @Published var tempLapArray: [TempLap] = []
@@ -167,10 +169,25 @@ extension Stopwatch {
     }
     
     func onTapCount() {
-        /// This function is called whenever the COUNT button is tapped
+        print(quickTapOn)
         
-        // Increment the stroke count by 1
-        strokeCount += 1
+        /// This function is called whenever the COUNT button is tapped
+        if quickTapOn {
+            let now = CACurrentMediaTime().truncate(toPlaces: 2)
+            let secondsSinceTapCount = now - timeOnTapCount
+            
+            if secondsSinceTapCount < 0.5 {
+                strokeCount += 0.5
+            } else {
+                strokeCount += 1
+            }
+            
+            // Update the timestamp of when the count button was last pressed
+            timeOnTapCount = now
+        } else {
+            // Increment the stroke count by 1
+            strokeCount += 1
+        }
     }
     
     func onTapCountAndRate() {
@@ -194,7 +211,8 @@ extension Stopwatch {
     
     func onTapRate() {
         /// This function is called whenever the RATE button is tapped
-        
+        print(rateBase)
+        print(rateUnits)
         // Call the rate timer to get the stroke rate, based on current rateUnits & rateBase settings
         getRate(units: rateUnits, cycles: rateBase)
     }

@@ -54,6 +54,21 @@ struct SettingsView: View {
                     }
                 }
                 
+                Section(header: HStack {
+                    Text("Count Options")
+                }, footer: HStack {
+                    Spacer()
+                    Text("See instructions for use.")
+                    Spacer()
+                }) {
+                    Toggle(isOn: $settings.quickTapAddsHalfStroke) {
+                        Text("Quick Tap Adds Half Stroke")
+                    }
+                    .onChange(of: settings.quickTapAddsHalfStroke, perform: { value in
+                        stopwatch.quickTapOn = value
+                    })
+                }
+                
                 Section(header: Text("Button Haptics")) {
                     Toggle(isOn: $settings.startButtonHaptics) {
                         Text("Start/Stop Button")

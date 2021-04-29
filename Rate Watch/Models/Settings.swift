@@ -34,6 +34,12 @@ final class Settings: ObservableObject {
         }
     }
     
+    @Published var quickTapAddsHalfStroke: Bool {
+        didSet {
+            defaults.setValue(quickTapAddsHalfStroke, forKeyPath: K.UserDefaultKeys.quickTapAddsHalfStroke)
+        }
+    }
+    
     var startButtonHaptics: Bool {
         didSet {
             defaults.setValue(startButtonHaptics, forKeyPath: K.UserDefaultKeys.startButtonHaptics)
@@ -74,6 +80,7 @@ final class Settings: ObservableObject {
         self.rateBase = defaults.object(forKey: K.UserDefaultKeys.rateBase) as? Double ?? 3.0
         self.rateUnits = defaults.object(forKey: K.UserDefaultKeys.rateUnits) as? String ?? K.RateUnits.secondsPerCycle
         self.buttonsFlippedHorizontally = defaults.object(forKey: K.UserDefaultKeys.buttonsFlippedHorizontally) as? Bool ?? false
+        self.quickTapAddsHalfStroke = defaults.object(forKey: K.UserDefaultKeys.quickTapAddsHalfStroke) as? Bool ?? false
         self.startButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.startButtonHaptics) as? Bool ?? true
         self.lapButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.lapButtonHaptics) as? Bool ?? true
         self.rateButtonHaptics = defaults.object(forKey: K.UserDefaultKeys.rateButtonHaptics) as? Bool ?? true

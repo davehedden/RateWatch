@@ -15,6 +15,9 @@ struct K {
         static let countButtonHeading = "Count Button"
         static let countButtonInstructions = "This button is used to track and record cycle counts for each lap during a race. Tapping the COUNT button increments the counter by 1, which is shown in the Timer Display area. The cycle count for each lap is displayed in the Lap Display area. The COUNT button can be used with or without the timer running. The counter is reset to 0 afer tapping the LAP or RESET button."
         
+        static let countSettingsHeading = "Stroke Rate Settings"
+        static let countSettingsInstructions = "In freestyle and backstroke, a swimmer may finish a lap with half a stroke cycle. In settings, you can choose to turn on the option for QUICK TAP ADDS HALF STROKE. When this setting is enabled, if the interval between the last two times you hit the COUNT button is less than 0.5 seconds, the count will increment by 0.5 instead of 1. In practical use, while you're watching a race, if it appears the swimmer will finish with a half stroke, after you tap the COUNT button on their last full cycle, quickly tap the COUNT button again and it will add a half stroke onto the count."
+        
         static let lapDisplayHeading = "Lap Display"
         static let lapDisplayInstructions = "Each time the LAP button is tapped, the lap data for the new lap is added into the Lap Display area:"
         
@@ -47,5 +50,6 @@ struct K {
         static let saveButtonHaptics = "SaveButtonHaptics"
         static let add5ButtonHaptics = "Add5ButtonHaptics"
         static let buttonsFlippedHorizontally = "ButtonsFlippedHorizontally"
+        static let quickTapAddsHalfStroke = "QuickTapAddsHalfStroke"
     }
 }

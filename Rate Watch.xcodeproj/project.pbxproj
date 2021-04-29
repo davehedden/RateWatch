@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55151B742634829400869893 /* LapDisplayInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55151B732634829400869893 /* LapDisplayInt.swift */; };
+		55151B7C2634889700869893 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55151B7B2634889700869893 /* DoubleExtension.swift */; };
 		552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */; };
 		5526440025AE6B9000111284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552643FF25AE6B9000111284 /* Assets.xcassets */; };
 		5526440325AE6B9000111284 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5526440225AE6B9000111284 /* Preview Assets.xcassets */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55151B732634829400869893 /* LapDisplayInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayInt.swift; sourceTree = "<group>"; };
+		55151B7B2634889700869893 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		552643F825AE6B8F00111284 /* Rate Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rate Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_WatchApp.swift; sourceTree = "<group>"; };
 		552643FF25AE6B9000111284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				5562902425BA729F009DC6BE /* LapDisplayList.swift */,
 				5562902925BA72C5009DC6BE /* LapDisplayRow.swift */,
 				552B167825C8C67D00AEB806 /* TempLapDisplayRow.swift */,
+				55151B732634829400869893 /* LapDisplayInt.swift */,
 				5562902E25BA72F1009DC6BE /* LapDisplayCount.swift */,
 				5562903325BA7312009DC6BE /* LapDisplayTime.swift */,
 				55CD11DC25CF07690073DA2B /* RaceDetailHeader.swift */,
@@ -299,6 +304,7 @@
 				55628FC125BA6D9D009DC6BE /* TestData.swift */,
 				55628FD725BA7016009DC6BE /* TimeFormatter.swift */,
 				55628FB925BA6D5C009DC6BE /* TimeIntervalExtension.swift */,
+				55151B7B2634889700869893 /* DoubleExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -456,12 +462,14 @@
 				5526440525AE6B9000111284 /* PersistenceController.swift in Sources */,
 				5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */,
 				5562900C25BA71F1009DC6BE /* ButtonDisplay.swift in Sources */,
+				55151B742634829400869893 /* LapDisplayInt.swift in Sources */,
 				55628FB525BA6D03009DC6BE /* Settings.swift in Sources */,
 				55DFC20325E57DF2006A8E7F /* RenameAlert.swift in Sources */,
 				5526443025AE6C3B00111284 /* Data.xcdatamodeld in Sources */,
 				55628FBA25BA6D5C009DC6BE /* TimeIntervalExtension.swift in Sources */,
 				556F7E1925C9CF0500FD8640 /* Lap+CoreDataClass.swift in Sources */,
 				5562902525BA729F009DC6BE /* LapDisplayList.swift in Sources */,
+				55151B7C2634889700869893 /* DoubleExtension.swift in Sources */,
 				552B167925C8C67D00AEB806 /* TempLapDisplayRow.swift in Sources */,
 				55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */,
 				5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */,

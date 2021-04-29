@@ -45,7 +45,7 @@ struct TimerDisplay: View {
             HStack {
                 TimerLabel(label: "Count")
                 
-                Text(String(format: "%02d", stopwatch.strokeCount))
+                Text(stopwatch.strokeCount.cleanDisplay)
                     .font(Font.custom("alarm clock", fixedSize: 36))
                 
                 Spacer()

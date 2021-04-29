@@ -23,7 +23,7 @@ extension Lap {
     @NSManaged public var raceID: Double
     @NSManaged public var rateUnits: String?
     @NSManaged public var storedLapNum: Int64
-    @NSManaged public var storedStrokeCount: Int64
+    @NSManaged public var strokeCount: Double
     @NSManaged public var strokeRates: [Double]?
     @NSManaged public var race: Race?
 

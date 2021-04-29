@@ -14,7 +14,7 @@ struct TempLapDisplayRow: View {
     var body: some View {
         VStack {
             HStack {
-                LapDisplayCount(num: lap.lapNum)
+                LapDisplayInt(num: lap.lapNum)
                     .foregroundColor(.white)
                 
                 LapDisplayTime(time: lap.cumTime, type: .cumulative)

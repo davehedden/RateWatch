@@ -15,21 +15,21 @@ public class Lap: NSManagedObject {
         get {
             return Int(storedLapNum)
         }
-        
+
         set {
             storedLapNum = Int64(newValue)
         }
     }
-    
-    var strokeCount: Int {
-        get {
-            return Int(storedStrokeCount)
-        }
-        
-        set {
-            storedStrokeCount = Int64(newValue)
-        }
-    }
+
+//    var strokeCount: Int {
+//        get {
+//            return Int(storedStrokeCount)
+//        }
+//
+//        set {
+//            storedStrokeCount = Int64(newValue)
+//        }
+//    }
     
     func medianStrokeRate() -> TimeInterval {
         if let rates = strokeRates {

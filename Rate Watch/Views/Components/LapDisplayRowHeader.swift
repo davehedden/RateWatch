@@ -35,7 +35,7 @@ struct LapDisplayRowHeader: View {
             Text("Ct")
                 .font(.system(size: 14))
                 .fontWeight(.bold)
-                .frame(width: 28, alignment: .trailing)
+                .frame(width: 32, alignment: .trailing)
             
             Text("Rt")
                 .font(.system(size: 14))

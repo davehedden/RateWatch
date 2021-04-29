@@ -22,6 +22,17 @@ func timeFormatterGenerator(zeroPaddingSetting: DateComponentsFormatter.ZeroForm
     return timeFormatter
 }
 
+//let countFormatter: NumberFormatter = {
+//    let formatter = NumberFormatter()
+//    formatter.minimumFractionDigits = 0
+//    formatter.maximumFractionDigits = 1
+//
+//    // Avoid not getting a zero on numbers lower than 1
+//    // Eg: .5, .67, etc...
+//    formatter.numberStyle = .decimal
+//    return formatter
+//}()
+
 let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short

@@ -8,7 +8,7 @@
         <attribute name="raceID" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="rateUnits" optional="YES" attributeType="String"/>
         <attribute name="storedLapNum" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="storedStrokeCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="strokeCount" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="strokeRates" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Double]"/>
         <relationship name="race" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Race" inverseName="laps" inverseEntity="Race"/>
     </entity>

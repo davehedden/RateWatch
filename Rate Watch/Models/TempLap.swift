@@ -14,7 +14,7 @@ struct TempLap {
     var cumTime: TimeInterval = 0
     var lapTime: TimeInterval = 0
     var lapTimeAlternate: TimeInterval = 0
-    var strokeCount: Int = 0
+    var strokeCount: Double = 0
     var strokeRates: [TimeInterval] = []
     var rateUnits: String
     

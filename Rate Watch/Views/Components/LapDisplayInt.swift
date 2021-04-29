@@ -1,26 +1,26 @@
 //
-//  LapDisplayCount.swift
+//  LapDisplayInt.swift
 //  Rate Watch
 //
-//  Created by Dave Hedden on 1/21/21.
+//  Created by Dave Hedden on 4/24/21.
 //
 
 import SwiftUI
 
-struct LapDisplayCount: View {
-    var num: Double
+struct LapDisplayInt: View {
+    var num: Int
     
     var body: some View {
-        Text(num.clean)
+        Text(String(num))
             .font(.system(size: 14))
             .fontWeight(.medium)
-            .frame(width: 32, alignment: .trailing)
+            .frame(width: 28, alignment: .trailing)
     }
 }
 
-struct LapDisplayCount_Previews: PreviewProvider {
+struct LapDisplayInt_Previews: PreviewProvider {
     static var previews: some View {
-        LapDisplayCount(num: 22.5)
+        LapDisplayInt(num: 22)
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
     }

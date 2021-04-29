@@ -21,6 +21,9 @@ struct InstructionsView: View {
                         TextGroup(heading: K.Instructions.countButtonHeading, text: K.Instructions.countButtonInstructions)
                             .padding(.bottom, 20)
                         
+                        TextGroupIndented(heading: K.Instructions.countSettingsHeading, text: K.Instructions.countSettingsInstructions)
+                            .padding(.bottom, 20)
+                        
                         TextGroup(heading: K.Instructions.rateButtonHeading, text: K.Instructions.rateButtonInstructions)
                             .padding(.bottom, 5)
                         
