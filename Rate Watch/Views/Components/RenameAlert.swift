@@ -50,7 +50,7 @@ struct RenameAlert: View {
                     // Dismiss the alert
                     isPresented = false
                     
-                    // Dismiss the keyboard
+                    // Dismiss the keyboard from view
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     
                     race.title = text
