@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		55151B742634829400869893 /* LapDisplayInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55151B732634829400869893 /* LapDisplayInt.swift */; };
 		55151B7C2634889700869893 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55151B7B2634889700869893 /* DoubleExtension.swift */; };
+		5516B494263C993800F55D7C /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516B492263C993800F55D7C /* Tag+CoreDataClass.swift */; };
+		5516B495263C993800F55D7C /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516B493263C993800F55D7C /* Tag+CoreDataProperties.swift */; };
+		5516B497263C9AE600F55D7C /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516B496263C9AE600F55D7C /* TagListView.swift */; };
 		552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */; };
 		5526440025AE6B9000111284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552643FF25AE6B9000111284 /* Assets.xcassets */; };
 		5526440325AE6B9000111284 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5526440225AE6B9000111284 /* Preview Assets.xcassets */; };
@@ -75,6 +78,9 @@
 /* Begin PBXFileReference section */
 		55151B732634829400869893 /* LapDisplayInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapDisplayInt.swift; sourceTree = "<group>"; };
 		55151B7B2634889700869893 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		5516B492263C993800F55D7C /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5516B493263C993800F55D7C /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5516B496263C9AE600F55D7C /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		552643F825AE6B8F00111284 /* Rate Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rate Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552643FB25AE6B8F00111284 /* Rate_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_WatchApp.swift; sourceTree = "<group>"; };
 		552643FF25AE6B9000111284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 				55628FFB25BA7197009DC6BE /* RaceDetailView.swift */,
 				55D38B5B25DDB310001F8339 /* InstructionsView.swift */,
 				55E80F67260A79640026076B /* LaunchScreen.storyboard */,
+				5516B496263C9AE600F55D7C /* TagListView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -276,6 +283,8 @@
 		55628F8025B533AF009DC6BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5516B492263C993800F55D7C /* Tag+CoreDataClass.swift */,
+				5516B493263C993800F55D7C /* Tag+CoreDataProperties.swift */,
 				55E80F60260A67560026076B /* Race+CoreDataClass.swift */,
 				55E80F61260A67560026076B /* Race+CoreDataProperties.swift */,
 				556F7E1325C9CF0500FD8640 /* Lap+CoreDataClass.swift */,
@@ -458,6 +467,7 @@
 				5562901B25BA725B009DC6BE /* LapDisplay.swift in Sources */,
 				5562901125BA7215009DC6BE /* ButtonTemplates.swift in Sources */,
 				5562902F25BA72F1009DC6BE /* LapDisplayCount.swift in Sources */,
+				5516B494263C993800F55D7C /* Tag+CoreDataClass.swift in Sources */,
 				55628FC225BA6D9D009DC6BE /* TestData.swift in Sources */,
 				5526440525AE6B9000111284 /* PersistenceController.swift in Sources */,
 				5562900425BA71D0009DC6BE /* TimerDisplay.swift in Sources */,
@@ -471,12 +481,14 @@
 				5562902525BA729F009DC6BE /* LapDisplayList.swift in Sources */,
 				55151B7C2634889700869893 /* DoubleExtension.swift in Sources */,
 				552B167925C8C67D00AEB806 /* TempLapDisplayRow.swift in Sources */,
+				5516B495263C993800F55D7C /* Tag+CoreDataProperties.swift in Sources */,
 				55628FD825BA7016009DC6BE /* TimeFormatter.swift in Sources */,
 				5562903E25BA7382009DC6BE /* Stopwatch.swift in Sources */,
 				55E80F63260A67560026076B /* Race+CoreDataProperties.swift in Sources */,
 				55628FAD25BA6C77009DC6BE /* Constants.swift in Sources */,
 				55E80F4D26090B450026076B /* RaceFilteredList.swift in Sources */,
 				55D38B5C25DDB310001F8339 /* InstructionsView.swift in Sources */,
+				5516B497263C9AE600F55D7C /* TagListView.swift in Sources */,
 				5562902A25BA72C5009DC6BE /* LapDisplayRow.swift in Sources */,
 				552643FC25AE6B8F00111284 /* Rate_WatchApp.swift in Sources */,
 				5562902025BA727E009DC6BE /* LapDisplayRowHeader.swift in Sources */,

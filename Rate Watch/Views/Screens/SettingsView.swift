@@ -11,8 +11,8 @@ struct SettingsView: View {
     @ObservedObject var settings: Settings
     @ObservedObject var stopwatch: Stopwatch
     @Environment(\.presentationMode) var presentationMode
-    @State var ratePopoverIsPresented = false
     @State var showInstructions = false
+    @State var showTagEditor = false
     
     var body: some View {
         NavigationView {
@@ -98,6 +98,23 @@ struct SettingsView: View {
                             Text("Flip Buttons Horizontally")
                         }
                     }
+                }
+                
+                Section(header: HStack {
+                    Text("Saved Data")
+                }) {
+                    Button(action: {
+                        showTagEditor.toggle()
+                    }) {
+                        HStack {
+                            Image(systemName: "tag.circle")
+                                .font(.system(size: 28))
+                            Text("Edit Tags")
+                        }
+                    }
+                    .sheet(isPresented: $showTagEditor, content: {
+                        TagListView()
+                    })
                 }
                 
                 Section(header: Text("Support"),

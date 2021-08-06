@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Lap" representedClassName="Lap" syncable="YES">
         <attribute name="cumTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -17,9 +17,16 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="laps" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Lap" inverseName="race" inverseEntity="Lap"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="race" inverseEntity="Tag"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="race" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Race" inverseName="tags" inverseEntity="Race"/>
     </entity>
     <elements>
         <element name="Lap" positionX="-63" positionY="-18" width="128" height="179"/>
-        <element name="Race" positionX="-296.4703369140625" positionY="-17.80035400390625" width="128" height="89"/>
+        <element name="Race" positionX="-296.4703369140625" positionY="-17.80035400390625" width="128" height="104"/>
+        <element name="Tag" positionX="-180" positionY="63" width="128" height="74"/>
     </elements>
 </model>
